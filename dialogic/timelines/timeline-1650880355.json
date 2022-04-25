@@ -1,0 +1,41 @@
+{
+	"events": [
+		{
+			"animation": "[No Animation]",
+			"animation_length": 0,
+			"animation_wait": true,
+			"change_mirror_portrait": true,
+			"change_position": true,
+			"change_z_index": false,
+			"character": "character-1650880362.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": true,
+			"portrait": "(Don't change)",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			},
+			"type": 2,
+			"z_index": 0
+		},
+		{
+			"character": "character-1650880362.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh you’re the new guy, right? I can’t believe management finally hired someone. What? You’re an intern? Dammit, I told them we need an actual professional.\n"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1650880355.json",
+		"name": "Rob-1"
+	}
+}

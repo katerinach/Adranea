@@ -1,0 +1,50 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1650634410.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1650634410.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[Player’s Name],right? I’m Hunter, your department’s manager. How are you finding the office? We even have a room for recreational activities during break time.\n\n Back to business though, we need to go over the customer reviews and delete the negative ones.\n"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 0.5
+		},
+		{
+			"character": "character-1650634410.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What? Of course it’s ethical. It’s our job to make sure the product we provide has the best reviews after all. \n\nFor example, here user bigbodonkas46 said: “1 star, f**kin thing broke after one use, you d***b mo******rs”. \n\nObviously, we can’t have that. Now following this example, keep deleting reviews.\n\n"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.4
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1650634594.json",
+		"name": "hunter-1"
+	}
+}

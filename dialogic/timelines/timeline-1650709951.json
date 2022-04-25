@@ -1,0 +1,40 @@
+{
+	"events": [
+		{
+			"animation": "back_in_right.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": true,
+			"change_position": true,
+			"change_z_index": true,
+			"character": "character-1650709885.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": true,
+			"portrait": "(Don't change)",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 2,
+			"z_index": 15
+		},
+		{
+			"character": "character-1650709885.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Go away dude, I’m working."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.7
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1650709951.json",
+		"name": "Gary-2"
+	}
+}
