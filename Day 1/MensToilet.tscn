@@ -1,11 +1,14 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Day 1/Entrance.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=3]
 [ext_resource path="res://World/toiletsFinal.png" type="Texture" id=4]
 [ext_resource path="res://World/sign.png" type="Texture" id=5]
 [ext_resource path="res://Player/Stede.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/officeFinal.png" type="Texture" id=7]
+[ext_resource path="res://Day 1/World.gd" type="Script" id=8]
+[ext_resource path="res://UI/Control.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=11]
 points = PoolVector2Array( 16, 48, 0, 48, 0, 0, 16, 0 )
@@ -303,8 +306,9 @@ points = PoolVector2Array( 0, 16, 24, 16, 24, 48, 0, 48 )
 radius = 4.0
 height = 6.0
 
-[node name="Node2D" type="Node2D"]
-position = Vector2( 24, 0 )
+[node name="MensToilet" type="Node2D"]
+position = Vector2( 52, 9 )
+script = ExtResource( 8 )
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 232, 176 )
@@ -344,9 +348,25 @@ position = Vector2( 48, 96 )
 position = Vector2( 266, 95 )
 
 [node name="Sprite" type="Sprite" parent="YSort/Sign"]
+position = Vector2( 24, 1 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Sign"]
 position = Vector2( 0, 4 )
 rotation = -1.5708
 shape = SubResource( 19 )
+
+[node name="Control" parent="YSort" instance=ExtResource( 9 )]
+margin_left = 267.0
+margin_top = 4.0
+margin_right = 307.0
+margin_bottom = 44.0
+
+[node name="World" parent="." instance=ExtResource( 2 )]
+position = Vector2( 54, 180 )
+scale = Vector2( -74.1919, 83.2598 )
+
+[node name="WorldPos" type="Position2D" parent="."]
+position = Vector2( 41, 75 )
+
+[connection signal="body_entered" from="World" to="World" method="_on_World_body_entered"]

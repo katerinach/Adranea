@@ -9,6 +9,7 @@ var dialogic_index = 1
 var first_frame
 var pos
 var pos_temp
+var task_complete = false 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	connect("body_entered", self, "_on_NPC_body_entered")
@@ -23,6 +24,7 @@ func _input(event):
 		if event.button_index == BUTTON_RIGHT:
 			if event.pressed:
 				if active == true:
+					print(self.get_path())
 					pos_temp = int(pos.x) - 20
 					if abs(pos_temp - self.position.x) <60 and abs(pos_temp - self.position.x-10)>20:
 						if pos_temp < self.position.x:
@@ -44,6 +46,9 @@ func _input(event):
 					get_tree().paused = false
 					if dialogic_index != 2:
 						dialogic_index = dialogic_index +1
+					else:
+						task_complete = true
+						Global.hunter_task = true
 
 			
 func _on_NPC_body_entered(body):
@@ -58,7 +63,8 @@ func _on_NPC_body_exited(body):
 	_sprite.set_frame(0)
 	
 
-
+func get_task():
+	return task_complete
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

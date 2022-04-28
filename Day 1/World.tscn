@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://NPCs/Hunter.gd" type="Script" id=2]
@@ -16,6 +16,9 @@
 [ext_resource path="res://NPCs/Caleb.gd" type="Script" id=14]
 [ext_resource path="res://NPCs/Chris.gd" type="Script" id=15]
 [ext_resource path="res://NPCs/John.gd" type="Script" id=16]
+[ext_resource path="res://UI/Control.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Day 1/Entrance.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Day 1/World.gd" type="Script" id=24]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
@@ -518,6 +521,10 @@ radius = 6.00333
 
 [node name="World" type="Node2D"]
 position = Vector2( 32, 32 )
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_vertical_guides_": [ -82.0 ]
+}
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 240, 184 )
@@ -680,3 +687,30 @@ scale = Vector2( 0.22, 0.22 )
 texture = ExtResource( 10 )
 hframes = 8
 vframes = 4
+
+[node name="Control" parent="YSort" instance=ExtResource( 17 )]
+
+[node name="Office1" parent="." instance=ExtResource( 23 )]
+position = Vector2( -28, 114 )
+scale = Vector2( 56.262, 87.7616 )
+
+[node name="Corridor" parent="." instance=ExtResource( 23 )]
+position = Vector2( 76, -6 )
+scale = Vector2( -70.9905, -93.2442 )
+
+[node name="MensToilet" parent="." instance=ExtResource( 23 )]
+position = Vector2( 525, 252 )
+scale = Vector2( -75.1893, -66.2665 )
+
+[node name="CorridorPos" type="Position2D" parent="."]
+position = Vector2( 78, 31 )
+
+[node name="Office1Pos" type="Position2D" parent="."]
+position = Vector2( 4, 115 )
+
+[node name="MensToiletPos" type="Position2D" parent="."]
+position = Vector2( 493, 253 )
+
+[connection signal="body_entered" from="Office1" to="Office1" method="_on_Office1_body_entered"]
+[connection signal="body_entered" from="Corridor" to="Corridor" method="_on_Corridor_body_entered"]
+[connection signal="body_entered" from="MensToilet" to="MensToilet" method="_on_MensToilet_body_entered"]
