@@ -1,14 +1,14 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://World/deskBack.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/recreationalFinal.png" type="Texture" id=2]
-[ext_resource path="res://NPCs/npcfemale.png" type="Texture" id=3]
+[ext_resource path="res://World/GrassBackground.png" type="Texture" id=3]
 [ext_resource path="res://World/office.png" type="Texture" id=4]
 [ext_resource path="res://World/officeFinal.png" type="Texture" id=5]
 [ext_resource path="res://Player/Stede.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/officeMore.png" type="Texture" id=7]
 [ext_resource path="res://NPCs/Rob.gd" type="Script" id=8]
-[ext_resource path="res://NPCs/images/Trixie.png" type="Texture" id=9]
+[ext_resource path="res://NPCs/npcmale.png" type="Texture" id=9]
 [ext_resource path="res://NPCs/pngwing.com (1).png" type="Texture" id=10]
 [ext_resource path="res://NPCs/Steve.gd" type="Script" id=11]
 [ext_resource path="res://NPCs/Barbara.gd" type="Script" id=12]
@@ -20,9 +20,6 @@
 [ext_resource path="res://World/deskFront.tscn" type="PackedScene" id=18]
 [ext_resource path="res://World/chairRight.tscn" type="PackedScene" id=19]
 [ext_resource path="res://World/chairLeft.tscn" type="PackedScene" id=20]
-[ext_resource path="res://NPCs/images/Rob.png" type="Texture" id=21]
-[ext_resource path="res://NPCs/images/Tina.png" type="Texture" id=22]
-[ext_resource path="res://NPCs/images/Steve.png" type="Texture" id=23]
 
 [sub_resource type="ConvexPolygonShape2D" id=17]
 points = PoolVector2Array( 16, 48, 0, 48, 0, 0, 16, 0 )
@@ -739,8 +736,7 @@ script = ExtResource( 15 )
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 240, 176 )
-texture = ExtResource( 22 )
-hframes = 4
+texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 500, 360 )
 
@@ -804,7 +800,7 @@ position = Vector2( 343, 284 )
 position = Vector2( 231, 284 )
 
 [node name="Rob" type="Area2D" parent="YSort"]
-position = Vector2( 338, 76 )
+position = Vector2( 250, 158 )
 scale = Vector2( 5, 5 )
 script = ExtResource( 8 )
 
@@ -813,18 +809,19 @@ position = Vector2( 0.199998, 0.2 )
 shape = SubResource( 28 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/Rob"]
-position = Vector2( 0.799805, -6.80005 )
+position = Vector2( 0.200195, -4.80005 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="YSort/Rob"]
 position = Vector2( 0.199997, -0.999985 )
 scale = Vector2( 0.22, 0.22 )
-texture = ExtResource( 21 )
-hframes = 4
+texture = ExtResource( 9 )
+hframes = 8
+vframes = 4
 
 [node name="Barbara" type="Area2D" parent="YSort"]
-position = Vector2( 119, 80 )
+position = Vector2( 122, 111 )
 scale = Vector2( 5, 5 )
 script = ExtResource( 12 )
 
@@ -833,19 +830,19 @@ position = Vector2( 0.199998, 0.2 )
 shape = SubResource( 29 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/Barbara"]
-position = Vector2( 0.199951, -7.59998 )
+position = Vector2( 0.200195, -4.80005 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="YSort/Barbara"]
 position = Vector2( 0.199997, -0.999985 )
 scale = Vector2( 0.22, 0.22 )
-texture = ExtResource( 3 )
+texture = ExtResource( 9 )
 hframes = 8
 vframes = 4
 
 [node name="Tina" type="Area2D" parent="YSort"]
-position = Vector2( 130, 211 )
+position = Vector2( 304, 58 )
 scale = Vector2( 5, 5 )
 script = ExtResource( 13 )
 
@@ -854,19 +851,19 @@ position = Vector2( 0.199998, 0.2 )
 shape = SubResource( 30 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/Tina"]
-position = Vector2( 0.160156, -5.04004 )
+position = Vector2( 0.200195, -4.80005 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="YSort/Tina"]
-position = Vector2( 0.600006, 4.2 )
+position = Vector2( 0.199997, -0.999985 )
 scale = Vector2( 0.22, 0.22 )
-texture = ExtResource( 22 )
-hframes = 4
-frame = 2
+texture = ExtResource( 9 )
+hframes = 8
+vframes = 4
 
 [node name="Steve" type="Area2D" parent="YSort"]
-position = Vector2( 206, 281 )
+position = Vector2( 404, 161 )
 scale = Vector2( 5, 5 )
 script = ExtResource( 11 )
 
@@ -875,28 +872,28 @@ position = Vector2( 0.199998, 0.2 )
 shape = SubResource( 31 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/Steve"]
-position = Vector2( 0.400391, -7.80005 )
+position = Vector2( 0.200195, -4.80005 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="YSort/Steve"]
 position = Vector2( 0.199997, -0.999985 )
 scale = Vector2( 0.22, 0.22 )
-texture = ExtResource( 23 )
-hframes = 4
-frame = 1
+texture = ExtResource( 9 )
+hframes = 8
+vframes = 4
 
 [node name="Trixie" type="Area2D" parent="YSort"]
-position = Vector2( 102, 225 )
+position = Vector2( 89, 217 )
 scale = Vector2( 5, 5 )
 script = ExtResource( 14 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Trixie"]
-position = Vector2( -0.200002, -2.40001 )
+position = Vector2( 0.199998, 0.2 )
 shape = SubResource( 32 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/Trixie"]
-position = Vector2( 0.399902, -8.2002 )
+position = Vector2( 0.200195, -4.80005 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 10 )
 
@@ -904,8 +901,8 @@ texture = ExtResource( 10 )
 position = Vector2( 0.199997, -0.999985 )
 scale = Vector2( 0.22, 0.22 )
 texture = ExtResource( 9 )
-hframes = 4
-frame = 1
+hframes = 8
+vframes = 4
 
 [node name="Control" parent="YSort" instance=ExtResource( 17 )]
 margin_left = 457.0

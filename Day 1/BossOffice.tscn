@@ -419,7 +419,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 19/z_index = 0
 
 [node name="BossOffice" type="Node2D"]
-position = Vector2( 16, 65 )
+position = Vector2( 24, 32 )
 script = ExtResource( 2 )
 
 [node name="Background" type="Sprite" parent="."]
