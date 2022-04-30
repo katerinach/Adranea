@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Menu.gd" type="Script" id=1]
+[ext_resource path="res://World/GrassBackground.png" type="Texture" id=1]
 [ext_resource path="res://World/dialoguebox.png" type="Texture" id=2]
+[ext_resource path="res://Options.gd" type="Script" id=3]
 
 [sub_resource type="TileSet" id=1]
 0/name = "dialoguebox.png 0"
@@ -75,11 +76,20 @@
 4/shapes = [  ]
 4/z_index = 0
 
-[node name="Menu" type="Control"]
+[node name="Options" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( -276, -10 )
-script = ExtResource( 1 )
+margin_left = -8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = 8.0
+script = ExtResource( 3 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 261, 167 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 500, 360 )
 
 [node name="OptionsBg" type="TileMap" parent="."]
 position = Vector2( 8, -20 )
@@ -88,33 +98,56 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -65537, 536870937, 0, -131072, 536870936, 0, -131071, 536870936, 0, -131070, 536870936, 0, -131069, 536870935, 0, -131066, 536870937, 0, -131065, 536870936, 0, -131064, 536870936, 0, -131063, 536870936, 0, -131062, 536870936, 0, -131061, 536870936, 0, -131060, 536870936, 0, -131059, 536870936, 0, -131058, 536870936, 0, -131057, 536870936, 0, -131056, 536870936, 0, -131055, 536870936, 0, -131054, 536870936, 0, -131053, 536870940, 0, -131052, 536870939, 0, -131051, 536870939, 0, -131050, 536870939, 0, -131049, 536870939, 0, -131048, 536870939, 0, -131047, 536870939, 0, -131046, 536870939, 0, -131045, 536870939, 0, -131044, 536870939, 0, -131043, 536870939, 0, -131042, 536870939, 0, -131041, 536870938, 0, 0, 3, 0, 1, 1, 0, 6, 1, 0, 11, 1, 0, 16, 1, 0, 21, 1, 0, 26, 1, 0, 27, 1, 0, 32, 1, 0, 131071, 5, 0, 65536, 4, 0, 65555, 5, 0, 65567, 7, 0, 196607, 5, 0, 131091, 5, 0, 131103, 7, 0, 262143, 5, 0, 196609, 1, 0, 196614, 1, 0, 196627, 5, 0, 196639, 7, 0, 327679, 5, 0, 262144, 4, 0, 262163, 1, 0, 262167, 1, 0, 262171, 1, 0, 262175, 7, 0, 393213, -1610612729, 0, 393214, -1610612729, 0, 393215, 5, 0, 327691, 1, 0, 327695, 1, 0, 327697, 1, 0, 327699, 5, 0, 327711, 7, 0, 327712, 1, 0, 458751, 1610612749, 0, 393235, 536870919, 0, 393247, 536870917, 0, 524287, 1610612749, 0, 458752, 4, 0, 458753, 1, 0, 458755, 1, 0, 458760, 1, 0, 458764, 1, 0, 458769, 1, 0, 458771, 536870919, 0, 458774, 1, 0, 458779, 1, 0, 458783, 536870917, 0, 589821, -1610612731, 0, 589822, -1610612731, 0, 589823, 5, 0, 524307, 536870944, 0, 524308, 536870936, 0, 524309, 536870936, 0, 524310, 536870936, 0, 524311, 536870935, 0, 524314, 536870937, 0, 524315, 536870936, 0, 524316, 536870936, 0, 524317, 536870936, 0, 524318, 536870936, 0, 524319, 536870942, 0, 655359, 5, 0, 589843, 8, 0, 589844, 9, 0, 589845, 9, 0, 589846, 9, 0, 589847, 10, 0, 589850, 8, 0, 589851, 9, 0, 589852, 9, 0, 589853, 9, 0, 589854, 9, 0, 589856, 1, 0, 720895, 5, 0, 655360, 4, 0, 786431, 5, 0, 720927, 7, 0, 851965, -1610612729, 0, 851966, -1610612729, 0, 851967, 5, 0, 786433, 1, 0, 786438, 1, 0, 786443, 1, 0, 786448, 1, 0, 786453, 1, 0, 786458, 1, 0, 786459, 1, 0, 786463, 7, 0, 917502, 1073741837, 0, 917503, 1610612749, 0, 851968, 4, 0, 851999, 7, 0, 852000, 1, 0, 983038, 1073741837, 0, 983039, 1610612749, 0, 917504, 4, 0, 917535, 7, 0, 917536, -1610612729, 0, 917537, -1610612729, 0, 1048573, -1610612731, 0, 1048574, -1610612731, 0, 1048575, 5, 0, 983072, 1073741838, 0, 983073, 1073741838, 0, 1114111, 5, 0, 1048608, 1073741838, 0, 1048609, 1073741838, 0, 1179647, 5, 0, 1114112, 0, 0, 1114115, 1, 0, 1114120, 1, 0, 1114125, 1, 0, 1114130, 1, 0, 1114135, 1, 0, 1114139, 1, 0, 1114143, 7, 0, 1114144, 1, 0, 1114145, -1610612731, 0, 1245183, 5, 0, 1179648, 0, 0, 1179679, 7, 0, 1310719, 5, 0, 1245215, 7, 0, 1376255, 536870944, 0, 1310720, 536870943, 0, 1310721, 536870943, 0, 1310722, 536870943, 0, 1310723, 536870943, 0, 1310724, 536870943, 0, 1310725, 536870943, 0, 1310726, 536870943, 0, 1310727, 536870943, 0, 1310728, 536870943, 0, 1310729, 536870943, 0, 1310730, 536870943, 0, 1310731, 536870943, 0, 1310732, 536870943, 0, 1310733, 536870943, 0, 1310734, 536870943, 0, 1310735, 536870943, 0, 1310736, 536870943, 0, 1310737, 536870943, 0, 1310738, 536870943, 0, 1310739, 536870943, 0, 1310740, 536870943, 0, 1310741, 536870943, 0, 1310742, 536870943, 0, 1310743, 536870943, 0, 1310744, 536870943, 0, 1310745, 536870943, 0, 1310746, 536870943, 0, 1310747, 536870943, 0, 1310748, 536870943, 0, 1310749, 536870943, 0, 1310750, 536870943, 0, 1310751, 536870942, 0, 1441795, 2, 0, 1441800, 2, 0, 1441804, 2, 0, 1441807, 2, 0, 1441812, 2, 0, 1441816, 2, 0, 1441819, 2, 0, 1441824, 2, 0, 1507328, 1, 0, 1507333, 1, 0, 1507338, 1, 0, 1507343, 1, 0, 1507348, 1, 0, 1507353, 1, 0, 1507355, 1, 0, 1507360, 1, 0 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -51.0
-margin_top = -34.0
-margin_right = 47.0
-margin_bottom = 34.0
-
-[node name="startButton" type="Button" parent="VBoxContainer"]
-margin_right = 98.0
-margin_bottom = 20.0
-text = "Start"
-
-[node name="optionsButton" type="Button" parent="VBoxContainer"]
-margin_top = 24.0
-margin_right = 98.0
-margin_bottom = 44.0
+margin_left = -27.0
+margin_top = 16.0
+margin_right = 29.0
+margin_bottom = 56.0
 text = "Options"
 
-[node name="quitButton" type="Button" parent="VBoxContainer"]
-margin_top = 48.0
-margin_right = 98.0
-margin_bottom = 68.0
-text = "Quit"
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -27.0
+margin_top = 56.0
+margin_right = 29.0
+margin_bottom = 96.0
+text = "Controls"
 
-[connection signal="pressed" from="VBoxContainer/startButton" to="." method="_on_startButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/optionsButton" to="." method="_on_optionsButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/quitButton" to="." method="_on_quitButton_pressed"]
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -75.0
+margin_top = 96.0
+margin_right = 165.0
+margin_bottom = 136.0
+text = "Walk: Arrows (Up,Down, Left, Right)"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -75.0
+margin_top = 128.0
+margin_right = 165.0
+margin_bottom = 168.0
+text = "Interact: Right Click"
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -75.0
+margin_top = 160.0
+margin_right = 165.0
+margin_bottom = 200.0
+text = "Taskbar: Left Click"
+
+[node name="backButton" type="Button" parent="."]
+margin_left = 232.0
+margin_top = 200.0
+margin_right = 331.0
+margin_bottom = 220.0
+text = "Back to Menu"
+
+[connection signal="pressed" from="backButton" to="." method="_on_backButton_pressed"]

@@ -21,7 +21,8 @@ func _on_startButton_pressed():
 
 
 func _on_optionsButton_pressed():
-	pass # Replace with function body.
+	var options = load("res://Options.tscn").instance()
+	get_tree().current_scene.add_child(options)
 
 
 func _on_quitButton_pressed():
