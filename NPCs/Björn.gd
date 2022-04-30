@@ -8,6 +8,7 @@ var active = false
 var dialogic_index = 1
 var first_frame
 var pos
+var pos_temp
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	connect("body_entered", self, "_on_NPC_body_entered")
@@ -22,26 +23,26 @@ func _input(event):
 		if event.button_index == BUTTON_RIGHT:
 			if event.pressed:
 				if active == true:
-					if dialogic_index <=2:
-						if abs(pos.x - self.position.x) <60 and abs(pos.x - self.position.x-10)>20:
-							if pos.x >= self.position.x:
-								$Sprite.set_frame(1)
-							else:
-								$Sprite.set_frame(2)
+					pos_temp = int(pos.x) - 20
+					if abs(pos_temp - self.position.x) <60 and abs(pos_temp - self.position.x-10)>20:
+						if pos_temp < self.position.x:
+							$Sprite.set_frame(2)
 						else:
-							if pos.y > (self.position.y):
-								$Sprite.set_frame(0)
-							else:
-								$Sprite.set_frame(3)
+							$Sprite.set_frame(1)
+					else:
+						if pos.y > (self.position.y):
+							$Sprite.set_frame(0)
+						else:
+							$Sprite.set_frame(3)
 					
 						
-					var dialog = Dialogic.start("Rob-" + str(dialogic_index))
+					var dialog = Dialogic.start("Björn-" + str(dialogic_index))
 					dialog.pause_mode = PAUSE_MODE_PROCESS
 					get_parent().add_child(dialog)
 					dialog.connect("timeline_end", self, "end_dialog")
 					get_tree().paused = true
 					get_tree().paused = false
-					if dialogic_index != 4:
+					if dialogic_index != 2:
 						dialogic_index = dialogic_index +1
 
 			

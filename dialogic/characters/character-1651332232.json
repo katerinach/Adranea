@@ -1,0 +1,21 @@
+{
+	"color": "#ff150e8b",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1651332232.json",
+	"mirror_portraits": false,
+	"name": "Björn",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		}
+	],
+	"scale": 100,
+	"theme": "theme-1650635282.cfg"
+}

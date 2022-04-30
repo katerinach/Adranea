@@ -23,19 +23,6 @@ func _input(event):
 		if event.button_index == BUTTON_RIGHT:
 			if event.pressed:
 				if active == true:
-					pos_temp = int(pos.x) - 20
-					if abs(pos_temp - self.position.x) <60 and abs(pos_temp - self.position.x-10)>20:
-						if pos_temp < self.position.x:
-							$Sprite.set_frame(2)
-						else:
-							$Sprite.set_frame(1)
-					else:
-						if pos.y > (self.position.y):
-							$Sprite.set_frame(0)
-						else:
-							$Sprite.set_frame(3)
-					
-						
 					var dialog = Dialogic.start("Gary-" + str(dialogic_index))
 					dialog.pause_mode = PAUSE_MODE_PROCESS
 					get_parent().add_child(dialog)

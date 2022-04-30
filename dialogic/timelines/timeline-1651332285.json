@@ -5,7 +5,7 @@
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
-			"character": "character-1650710600.json",
+			"character": "character-1651332232.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
@@ -21,24 +21,19 @@
 			"z_index": 0
 		},
 		{
-			"character": "character-1650710600.json",
+			"character": "character-1651332232.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I didn’t do anything! I swear!"
+			"text": "MMMMMMMMMMMMM"
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 0.7
-		},
-		{
-			"custom_slot": "",
-			"event_id": "dialogic_026",
-			"use_default_slot": true
+			"transition_duration": 1
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.2 - Dev",
-		"file": "timeline-1650710755.json",
-		"name": "Caleb-2"
+		"file": "timeline-1651332285.json",
+		"name": "Björn-2"
 	}
 }

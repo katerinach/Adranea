@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pngwing.com.png-50387db52dc0f3e63e9c810fb11f03a0.stex"
+path="res://.import/Hunter.png-94c292ab84768f53c0afa8050eb80e86.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NPCs/pngwing.com.png"
-dest_files=[ "res://.import/pngwing.com.png-50387db52dc0f3e63e9c810fb11f03a0.stex" ]
+source_file="res://NPCs/images/Hunter.png"
+dest_files=[ "res://.import/Hunter.png-94c292ab84768f53c0afa8050eb80e86.stex" ]
 
 [params]
 

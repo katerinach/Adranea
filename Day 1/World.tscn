@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://World/deskBack.tscn" type="PackedScene" id=1]
 [ext_resource path="res://NPCs/Hunter.gd" type="Script" id=2]
@@ -20,8 +20,14 @@
 [ext_resource path="res://World/DeskLeft.tscn" type="PackedScene" id=18]
 [ext_resource path="res://World/chairLeft.tscn" type="PackedScene" id=19]
 [ext_resource path="res://World/chairRight.tscn" type="PackedScene" id=20]
+[ext_resource path="res://NPCs/images/John.png" type="Texture" id=21]
+[ext_resource path="res://NPCs/images/Gary.png" type="Texture" id=22]
 [ext_resource path="res://Day 1/Entrance.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Day 1/World.gd" type="Script" id=24]
+[ext_resource path="res://NPCs/images/Hunter.png" type="Texture" id=25]
+[ext_resource path="res://NPCs/images/Caleb.png" type="Texture" id=26]
+[ext_resource path="res://NPCs/images/Tina.png" type="Texture" id=27]
+[ext_resource path="res://NPCs/Björn.gd" type="Script" id=28]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
@@ -606,49 +612,48 @@ position = Vector2( 246, 284 )
 position = Vector2( 247, 48 )
 
 [node name="Mary" type="Area2D" parent="YSort"]
-position = Vector2( 250, 158 )
+position = Vector2( 376, 263 )
 scale = Vector2( 5, 5 )
 script = ExtResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Mary"]
-position = Vector2( 0.199998, 0.2 )
+position = Vector2( 0.199998, 0.999999 )
 shape = SubResource( 15 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/Mary"]
-position = Vector2( 0.200195, -4.80005 )
+position = Vector2( 0.200195, -5.80005 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 11 )
 
 [node name="Sprite" type="Sprite" parent="YSort/Mary"]
-position = Vector2( 0.199997, -0.999985 )
+position = Vector2( 0.199997, 4 )
 scale = Vector2( 0.22, 0.22 )
-texture = ExtResource( 10 )
-hframes = 8
-vframes = 4
+texture = ExtResource( 27 )
+hframes = 4
+frame = 2
 
 [node name="John" type="Area2D" parent="YSort"]
-position = Vector2( 108, 69 )
+position = Vector2( 159, 45 )
 scale = Vector2( 5, 5 )
 script = ExtResource( 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/John"]
-position = Vector2( 0.199998, 0.2 )
+position = Vector2( 0.6, -0.999999 )
 shape = SubResource( 15 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/John"]
-position = Vector2( 0.200195, -4.80005 )
+position = Vector2( 0.399902, -8 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 11 )
 
 [node name="Sprite" type="Sprite" parent="YSort/John"]
 position = Vector2( 0.199997, -0.999985 )
 scale = Vector2( 0.22, 0.22 )
-texture = ExtResource( 10 )
-hframes = 8
-vframes = 4
+texture = ExtResource( 21 )
+hframes = 4
 
 [node name="Gary" type="Area2D" parent="YSort"]
-position = Vector2( 432, 241 )
+position = Vector2( 152, 146 )
 scale = Vector2( 5, 5 )
 script = ExtResource( 13 )
 
@@ -657,16 +662,16 @@ position = Vector2( 0.199998, 0.2 )
 shape = SubResource( 15 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/Gary"]
-position = Vector2( 0.200195, -4.80005 )
+position = Vector2( 0.200195, -6.6001 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 11 )
 
 [node name="Sprite" type="Sprite" parent="YSort/Gary"]
-position = Vector2( 0.199997, -0.999985 )
+position = Vector2( 0, 1 )
 scale = Vector2( 0.22, 0.22 )
-texture = ExtResource( 10 )
-hframes = 8
-vframes = 4
+texture = ExtResource( 22 )
+hframes = 4
+frame = 1
 
 [node name="Chris" type="Area2D" parent="YSort"]
 position = Vector2( 214, 102 )
@@ -699,19 +704,18 @@ position = Vector2( 0.199998, 0.2 )
 shape = SubResource( 15 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/Hunter"]
-position = Vector2( 0.200195, -4.80005 )
+position = Vector2( 0, -5.6001 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 11 )
 
 [node name="Sprite" type="Sprite" parent="YSort/Hunter"]
-position = Vector2( 0.199997, -0.999985 )
+position = Vector2( 0.199997, 0.800003 )
 scale = Vector2( 0.22, 0.22 )
-texture = ExtResource( 10 )
-hframes = 8
-vframes = 4
+texture = ExtResource( 25 )
+hframes = 4
 
 [node name="Caleb" type="Area2D" parent="YSort"]
-position = Vector2( 46, 119 )
+position = Vector2( 240, 38 )
 scale = Vector2( 5, 5 )
 script = ExtResource( 14 )
 
@@ -720,18 +724,37 @@ position = Vector2( 0.199998, 0.2 )
 shape = SubResource( 15 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/Caleb"]
-position = Vector2( 0.200195, -4.80005 )
+position = Vector2( 0.200073, -6 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 11 )
 
 [node name="Sprite" type="Sprite" parent="YSort/Caleb"]
-position = Vector2( 0.199997, -0.999985 )
+position = Vector2( 0.800003, 0.800003 )
 scale = Vector2( 0.22, 0.22 )
-texture = ExtResource( 10 )
-hframes = 8
-vframes = 4
+texture = ExtResource( 26 )
+hframes = 4
 
 [node name="Control" parent="YSort" instance=ExtResource( 17 )]
+
+[node name="Björn" type="Area2D" parent="YSort"]
+position = Vector2( 368, 59 )
+scale = Vector2( 5, 5 )
+script = ExtResource( 28 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Björn"]
+position = Vector2( 0.6, -0.999999 )
+shape = SubResource( 15 )
+
+[node name="QuestionMark" type="Sprite" parent="YSort/Björn"]
+position = Vector2( 0.399902, -8 )
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 11 )
+
+[node name="Sprite" type="Sprite" parent="YSort/Björn"]
+position = Vector2( 0.199997, -0.999985 )
+scale = Vector2( 0.22, 0.22 )
+texture = ExtResource( 21 )
+hframes = 4
 
 [node name="Office1" parent="." instance=ExtResource( 23 )]
 position = Vector2( -28, 114 )
