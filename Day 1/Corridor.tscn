@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://UI/Control.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Day 1/Entrance.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Player/Stede.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World/officeFinal.png" type="Texture" id=6]
 [ext_resource path="res://Day 1/World.gd" type="Script" id=7]
+[ext_resource path="res://World/DeskLeft.tscn" type="PackedScene" id=8]
+[ext_resource path="res://World/chairLeft.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=19]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 48, 0, 48 )
@@ -275,6 +277,12 @@ tile_data = PoolIntArray( -196595, 7, 0, -196594, 1073741843, 0, -196593, 107374
 
 [node name="Stede" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 256, 176 )
+
+[node name="DeskLeft" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 201, 50 )
+
+[node name="chairLeft" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 179, 51 )
 
 [node name="Control" parent="YSort" instance=ExtResource( 1 )]
 

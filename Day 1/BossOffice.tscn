@@ -1,6 +1,6 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
-[ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/DeskLeft.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Day 1/World.gd" type="Script" id=2]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=3]
 [ext_resource path="res://World/office.png" type="Texture" id=4]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Player/Stede.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Day 1/Entrance.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/Control.tscn" type="PackedScene" id=8]
+[ext_resource path="res://World/chairLeft.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=11]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
@@ -445,14 +446,11 @@ tile_data = PoolIntArray( -65537, 536870925, 0, -131072, 536870924, 0, -131071, 
 [node name="Stede" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 328, 128 )
 
-[node name="Bush" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 64, 104 )
+[node name="DeskLeft" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 73, 81 )
 
-[node name="Bush2" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 352, 64 )
-
-[node name="Bush3" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 248, 88 )
+[node name="chairLeft" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 54, 78 )
 
 [node name="Control" parent="YSort" instance=ExtResource( 8 )]
 
