@@ -8,12 +8,12 @@
 			"character": "character-1651304208.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
-			"portrait": "Default",
+			"portrait": "Susan Sprite",
 			"portrait_definition": "",
 			"position": {
 				"0": false,
 				"1": false,
-				"2": false,
+				"2": true,
 				"3": false,
 				"4": false
 			},
@@ -22,8 +22,8 @@
 		},
 		{
 			"event_id": "dialogic_023",
-			"hide_dialogbox": true,
-			"wait_seconds": 2
+			"hide_dialogbox": false,
+			"wait_seconds": 1.2
 		},
 		{
 			"character": "character-1651304208.json",

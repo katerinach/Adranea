@@ -34,13 +34,13 @@ func _input(event):
 							$Sprite.set_frame(3)
 					
 						
-					var dialog = Dialogic.start("Steve-" + str(dialogic_index))
+					var dialog = Dialogic.start("Rob-" + str(dialogic_index))
 					dialog.pause_mode = PAUSE_MODE_PROCESS
 					get_parent().add_child(dialog)
 					dialog.connect("timeline_end", self, "end_dialog")
 					get_tree().paused = true
 					get_tree().paused = false
-					if dialogic_index != 2:
+					if dialogic_index != 4:
 						dialogic_index = dialogic_index +1
 
 			
@@ -53,7 +53,7 @@ func _on_NPC_body_entered(body):
 func _on_NPC_body_exited(body):
 	if body.name == 'Stede':
 		active = false
-	_sprite.set_frame(0)
+	_sprite.set_frame(3)
 	
 
 

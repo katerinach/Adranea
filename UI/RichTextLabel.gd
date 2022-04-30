@@ -19,9 +19,15 @@ func _ready():
 	else: 
 		self.add_image(t,10,10)
 	add_text(" Talk to manager Hunter about our customer reviews\n\n")
-	self.add_image(t,10,10)
+	if Global.telephone_task== true: 
+		self.add_image(t_done,10,10) 
+	else: 
+		self.add_image(t,10,10)
 	add_text(" Sales call to Funkin Fonuts\n\n")
-	self.add_image(t,10,10)
+	if Global.computer_task== true: 
+		self.add_image(t_done,10,10) 
+	else: 
+		self.add_image(t,10,10)
 	add_text(" Inspect company data analytics\n\n")
 	self.add_image(t,10,10)
 	add_text(" Have a coffee break")
@@ -32,16 +38,25 @@ func _process(delta):
 	self.clear()
 	t=load("res://UI/empty-square-icon-png-1-Transparent-Images.png")
 	t_done = load("res://UI/tick.png")
-	self.add_image(t,10,10)
+	if Global.boss_task == true: 
+		self.add_image(t_done,10,10) 
+	else: 
+		self.add_image(t,10,10)
 	add_text(" Introduce yourself to boss\n\n")
 	if Global.hunter_task == true: 
 		self.add_image(t_done,10,10) 
 	else: 
 		self.add_image(t,10,10)
 	add_text(" Talk to manager Hunter about our customer reviews\n\n")
-	self.add_image(t,10,10)
+	if Global.telephone_task== true: 
+		self.add_image(t_done,10,10) 
+	else: 
+		self.add_image(t,10,10)
 	add_text(" Sales call to Funkin Fonuts\n\n")
-	self.add_image(t,10,10)
+	if Global.computer_task== true: 
+		self.add_image(t_done,10,10) 
+	else: 
+		self.add_image(t,10,10)
 	add_text(" Inspect company data analytics\n\n")
 	self.add_image(t,10,10)
 	add_text(" Have a coffee break")

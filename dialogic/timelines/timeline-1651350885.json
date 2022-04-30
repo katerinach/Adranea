@@ -1,0 +1,23 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1651350964.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " dialing…\n\nWelcome to Funkin Fonuts! Home of the best nuts in the country. How may we help you today?\n\nYou again??? Listen here you little @#snwdj, if you ever call us again we’re going to crush your little nuts to pieces. WE.ARE.NOT.INTERESTED.\n\n*They hanged up*\n"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1651350885.json",
+		"name": "Telephone-1"
+	}
+}

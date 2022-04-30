@@ -32,3 +32,16 @@ func _on_MensToilet_body_entered(body):
 	if body.name == 'Stede':
 		Global.from_scene = get_parent().name
 		get_tree().change_scene('res://Day 1/' + self.name + '.tscn')
+
+
+func _on_Office3_body_entered(body):
+	if body.name == 'Stede':
+		Global.from_scene = get_parent().name
+		get_tree().change_scene('res://Day 1/' + 'Office2' + '.tscn')
+
+
+
+func _on_Office11_body_entered(body):
+	if body.name == 'Stede':
+		Global.from_scene = get_parent().name
+		get_tree().change_scene('res://Day 1/' + 'Office1' + '.tscn')

@@ -8,6 +8,7 @@ var active = false
 var dialogic_index = 1
 var first_frame
 var pos
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	connect("body_entered", self, "_on_NPC_body_entered")
@@ -53,7 +54,7 @@ func _on_NPC_body_entered(body):
 func _on_NPC_body_exited(body):
 	if body.name == 'Stede':
 		active = false
-	_sprite.set_frame(0)
+	_sprite.set_frame(2)
 	
 
 

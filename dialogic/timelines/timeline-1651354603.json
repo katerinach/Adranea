@@ -1,0 +1,23 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1651350964.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You began reviewing the company's data analytics.\n\n.....\n\n It appears that users over forty tend to prefer our wig selection. They are tagged as “midlife crisis”.\n\n.......\n\nMy little horsey merchandise seems to be prefered by men over 25. \n\n......"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1651354603.json",
+		"name": "Computer-1"
+	}
+}

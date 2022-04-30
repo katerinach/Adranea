@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://World/deskBack.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/recreationalFinal.png" type="Texture" id=2]
@@ -8,18 +8,43 @@
 [ext_resource path="res://Player/Stede.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/officeMore.png" type="Texture" id=7]
 [ext_resource path="res://NPCs/Rob.gd" type="Script" id=8]
-[ext_resource path="res://NPCs/npcmale.png" type="Texture" id=9]
+[ext_resource path="res://NPCs/images/Tina.png" type="Texture" id=9]
 [ext_resource path="res://NPCs/pngwing.com (1).png" type="Texture" id=10]
 [ext_resource path="res://NPCs/Steve.gd" type="Script" id=11]
 [ext_resource path="res://NPCs/Barbara.gd" type="Script" id=12]
 [ext_resource path="res://NPCs/Tina.gd" type="Script" id=13]
 [ext_resource path="res://NPCs/Trixie.gd" type="Script" id=14]
-[ext_resource path="res://Day 1/World.gd" type="Script" id=15]
+[ext_resource path="res://NPCs/images/Rob.png" type="Texture" id=15]
 [ext_resource path="res://Day 1/Entrance.tscn" type="PackedScene" id=16]
 [ext_resource path="res://UI/Control.tscn" type="PackedScene" id=17]
 [ext_resource path="res://World/deskFront.tscn" type="PackedScene" id=18]
 [ext_resource path="res://World/chairRight.tscn" type="PackedScene" id=19]
 [ext_resource path="res://World/chairLeft.tscn" type="PackedScene" id=20]
+[ext_resource path="res://NPCs/images/Steve.png" type="Texture" id=21]
+[ext_resource path="res://NPCs/npcfemale.png" type="Texture" id=22]
+[ext_resource path="res://NPCs/images/Trixie.png" type="Texture" id=23]
+[ext_resource path="res://NPCs/Susan.gd" type="Script" id=24]
+[ext_resource path="res://NPCs/images/Hunter.png" type="Texture" id=25]
+
+[sub_resource type="GDScript" id=16]
+script/source = "extends Node2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	if Global.from_scene != null:
+		get_node(\"YSort/Stede\").set_position(get_node(Global.from_scene +'Pos').position)
+		
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
 
 [sub_resource type="ConvexPolygonShape2D" id=17]
 points = PoolVector2Array( 16, 48, 0, 48, 0, 0, 16, 0 )
@@ -39,7 +64,7 @@ points = PoolVector2Array( 16, 48, 0, 48, 0, 0, 16, 0 )
 [sub_resource type="ConvexPolygonShape2D" id=14]
 points = PoolVector2Array( 8, 16, 0, 16, 0, 0, 8, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=16]
+[sub_resource type="ConvexPolygonShape2D" id=33]
 points = PoolVector2Array( 16, 16, 8, 16, 8, 0, 16, 0 )
 
 [sub_resource type="TileSet" id=10]
@@ -102,14 +127,14 @@ points = PoolVector2Array( 16, 16, 8, 16, 8, 0, 16, 0 )
 7/navigation_offset = Vector2( 0, 0 )
 7/shape_offset = Vector2( 0, 0 )
 7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-7/shape = SubResource( 16 )
+7/shape = SubResource( 33 )
 7/shape_one_way = false
 7/shape_one_way_margin = 1.0
 7/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 16 ),
+"shape": SubResource( 33 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 7/z_index = 0
@@ -732,7 +757,7 @@ radius = 6.00333
 
 [node name="Office1" type="Node2D"]
 position = Vector2( 16, 15 )
-script = ExtResource( 15 )
+script = SubResource( 16 )
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 240, 176 )
@@ -809,19 +834,18 @@ position = Vector2( 0.199998, 0.2 )
 shape = SubResource( 28 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/Rob"]
-position = Vector2( 0.200195, -4.80005 )
+position = Vector2( 0.599609, -6.6001 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="YSort/Rob"]
 position = Vector2( 0.199997, -0.999985 )
 scale = Vector2( 0.22, 0.22 )
-texture = ExtResource( 9 )
-hframes = 8
-vframes = 4
+texture = ExtResource( 15 )
+hframes = 4
 
 [node name="Barbara" type="Area2D" parent="YSort"]
-position = Vector2( 122, 111 )
+position = Vector2( 118, 78 )
 scale = Vector2( 5, 5 )
 script = ExtResource( 12 )
 
@@ -830,40 +854,40 @@ position = Vector2( 0.199998, 0.2 )
 shape = SubResource( 29 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/Barbara"]
-position = Vector2( 0.200195, -4.80005 )
+position = Vector2( 0.399902, -7.59998 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="YSort/Barbara"]
 position = Vector2( 0.199997, -0.999985 )
 scale = Vector2( 0.22, 0.22 )
-texture = ExtResource( 9 )
+texture = ExtResource( 22 )
 hframes = 8
 vframes = 4
 
 [node name="Tina" type="Area2D" parent="YSort"]
-position = Vector2( 304, 58 )
+position = Vector2( 126, 214 )
 scale = Vector2( 5, 5 )
 script = ExtResource( 13 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Tina"]
-position = Vector2( 0.199998, 0.2 )
+position = Vector2( 0.399999, 0.6 )
 shape = SubResource( 30 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/Tina"]
-position = Vector2( 0.200195, -4.80005 )
+position = Vector2( 0.600098, -6.59998 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="YSort/Tina"]
-position = Vector2( 0.199997, -0.999985 )
+position = Vector2( 0.399994, 2.8 )
 scale = Vector2( 0.22, 0.22 )
 texture = ExtResource( 9 )
-hframes = 8
-vframes = 4
+hframes = 4
+frame = 2
 
 [node name="Steve" type="Area2D" parent="YSort"]
-position = Vector2( 404, 161 )
+position = Vector2( 340, 78 )
 scale = Vector2( 5, 5 )
 script = ExtResource( 11 )
 
@@ -872,16 +896,15 @@ position = Vector2( 0.199998, 0.2 )
 shape = SubResource( 31 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/Steve"]
-position = Vector2( 0.200195, -4.80005 )
+position = Vector2( 0.599609, -6.3999 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="YSort/Steve"]
-position = Vector2( 0.199997, -0.999985 )
+position = Vector2( 0.399994, 0.400002 )
 scale = Vector2( 0.22, 0.22 )
-texture = ExtResource( 9 )
-hframes = 8
-vframes = 4
+texture = ExtResource( 21 )
+hframes = 4
 
 [node name="Trixie" type="Area2D" parent="YSort"]
 position = Vector2( 89, 217 )
@@ -893,16 +916,16 @@ position = Vector2( 0.199998, 0.2 )
 shape = SubResource( 32 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/Trixie"]
-position = Vector2( 0.200195, -4.80005 )
+position = Vector2( -0.199951, -7.7998 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="YSort/Trixie"]
 position = Vector2( 0.199997, -0.999985 )
 scale = Vector2( 0.22, 0.22 )
-texture = ExtResource( 9 )
-hframes = 8
-vframes = 4
+texture = ExtResource( 23 )
+hframes = 4
+frame = 1
 
 [node name="Control" parent="YSort" instance=ExtResource( 17 )]
 margin_left = 457.0
@@ -910,11 +933,40 @@ margin_top = 2.0
 margin_right = 497.0
 margin_bottom = 42.0
 
-[node name="WorldPos" type="Position2D" parent="."]
+[node name="Susan" type="Area2D" parent="YSort"]
+position = Vector2( 450, 233 )
+scale = Vector2( 5, 5 )
+script = ExtResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Susan"]
+position = Vector2( 0.199998, 0.2 )
+shape = SubResource( 28 )
+
+[node name="QuestionMark" type="Sprite" parent="YSort/Susan"]
+position = Vector2( 0.599609, -7.3999 )
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="YSort/Susan"]
+position = Vector2( 0.199997, -0.999985 )
+scale = Vector2( 0.22, 0.22 )
+texture = ExtResource( 25 )
+hframes = 4
+
+[node name="Office2Pos" type="Position2D" parent="."]
 position = Vector2( 496, 111 )
 
-[node name="World" parent="." instance=ExtResource( 16 )]
+[node name="Office2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 534, 111 )
 scale = Vector2( 65.0055, -83.5991 )
 
-[connection signal="body_entered" from="World" to="World" method="_on_World_body_entered"]
+[node name="Office2Pos2" type="Position2D" parent="."]
+position = Vector2( 489, 227 )
+
+[node name="Office3" parent="." instance=ExtResource( 16 )]
+position = Vector2( 534, 217 )
+scale = Vector2( 65.0055, -83.5991 )
+
+[connection signal="body_entered" from="Office2" to="Office2" method="_on_World_body_entered"]
+[connection signal="body_entered" from="Office3" to="Office3" method="_on_World_body_entered"]
+[connection signal="body_entered" from="Office3" to="Office3" method="_on_Office3_body_entered"]

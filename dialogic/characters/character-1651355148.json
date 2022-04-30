@@ -1,0 +1,25 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1651355148.json",
+	"mirror_portraits": false,
+	"name": "Tyrell",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": -20,
+	"offset_y": -95,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://World/Tyrel Sprite.PNG"
+		},
+		{
+			"name": "Tyrel Sprite",
+			"path": "res://World/Tyrel Sprite.PNG"
+		}
+	],
+	"scale": 15,
+	"theme": ""
+}

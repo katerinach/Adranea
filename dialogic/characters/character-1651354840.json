@@ -1,0 +1,25 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1651354840.json",
+	"mirror_portraits": false,
+	"name": "Charlotte",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": -20,
+	"offset_y": -95,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://World/Charlotte Sprite.PNG"
+		},
+		{
+			"name": "Charlotte Sprite",
+			"path": "res://World/Charlotte Sprite.PNG"
+		}
+	],
+	"scale": 15,
+	"theme": "theme-1650635282.cfg"
+}

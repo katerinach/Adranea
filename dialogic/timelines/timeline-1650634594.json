@@ -3,18 +3,19 @@
 		{
 			"animation": "[Default]",
 			"animation_length": 0,
+			"animation_wait": false,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
 			"character": "character-1650634410.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
-			"portrait": "Default",
+			"portrait": "Hunter Sprite",
 			"portrait_definition": "",
 			"position": {
-				"0": true,
+				"0": false,
 				"1": false,
 				"2": false,
-				"3": false,
+				"3": true,
 				"4": false
 			},
 			"type": 0,
@@ -29,7 +30,7 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
-			"wait_seconds": 0.5
+			"wait_seconds": 0.1
 		},
 		{
 			"character": "character-1650634410.json",

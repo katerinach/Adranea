@@ -42,7 +42,7 @@ func _on_NPC_body_entered(body):
 func _on_NPC_body_exited(body):
 	if body.name == 'Stede':
 		active = false
-	_sprite.set_frame(0)
+	_sprite.set_frame(1)
 	
 
 

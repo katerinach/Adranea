@@ -23,10 +23,29 @@
 [ext_resource path="res://World/officePC.png" type="Texture" id=21]
 [ext_resource path="res://World/pcDown.png" type="Texture" id=22]
 [ext_resource path="res://Day 1/Entrance.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Day 1/World.gd" type="Script" id=24]
 [ext_resource path="res://World/phone.png" type="Texture" id=25]
 
-[sub_resource type="ConvexPolygonShape2D" id=16]
+[sub_resource type="GDScript" id=16]
+script/source = "extends Node2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	if Global.from_scene != null:
+		get_node(\"YSort/Stede\").set_position(get_node(Global.from_scene +'Pos').position)
+		
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="ConvexPolygonShape2D" id=31]
 points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=17]
@@ -202,14 +221,14 @@ points = PoolVector2Array( 16, 16, 8, 16, 8, 0, 16, 0 )
 21/navigation_offset = Vector2( 0, 0 )
 21/shape_offset = Vector2( 0, 0 )
 21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-21/shape = SubResource( 16 )
+21/shape = SubResource( 31 )
 21/shape_one_way = false
 21/shape_one_way_margin = 1.0
 21/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 16 ),
+"shape": SubResource( 31 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 21/z_index = 0
@@ -576,13 +595,13 @@ height = 0.0
 
 [node name="World" type="Node2D"]
 position = Vector2( 32, 32 )
-script = ExtResource( 24 )
+script = SubResource( 16 )
 __meta__ = {
 "_edit_vertical_guides_": [ -82.0 ]
 }
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 240, 184 )
+position = Vector2( 274, 182 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 500, 360 )

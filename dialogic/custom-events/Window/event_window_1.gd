@@ -8,11 +8,11 @@ func handle_event(event_data, dialog_node):
 		While other states exist, they generally are not neccesary, but include IDLE, TYPING, and ANIMATING
 	"""
 	#dialog_node.set_state(dialog_node.state.WAITING)
-	dialog_node.set_state(dialog_node.state.WAITING_INPUT)
-	Global.display = true
+	#dialog_node.set_state(dialog_node.state.WAITING_INPUT)
+	#Global.display = true
 	#Global.get_node("TaskList").display =
 
 	
 	# once you want to continue with the next event
-	dialog_node._load_next_event()
-	dialog_node.set_state(dialog_node.state.READY)
+	#dialog_node._load_next_event()
+	#dialog_node.set_state(dialog_node.state.READY)

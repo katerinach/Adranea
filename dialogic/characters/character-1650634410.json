@@ -8,14 +8,18 @@
 	"name": "Hunter",
 	"nickname": "",
 	"nickname_bool": false,
-	"offset_x": 0,
-	"offset_y": 0,
+	"offset_x": -65,
+	"offset_y": -95,
 	"portraits": [
 		{
 			"name": "Default",
-			"path": ""
+			"path": "res://World/Hunter Sprite.PNG"
+		},
+		{
+			"name": "Hunter Sprite",
+			"path": "res://World/Hunter Sprite.PNG"
 		}
 	],
-	"scale": 100,
+	"scale": 15,
 	"theme": ""
 }

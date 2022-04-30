@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/John.png-36dd305ab34d053388aa9de98ecaf9ec.stex"
+path="res://.import/dialogueboxwithoutname.png-a90bbb507df106a409eff3b4e5c6f2b8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://John.png"
-dest_files=[ "res://.import/John.png-36dd305ab34d053388aa9de98ecaf9ec.stex" ]
+source_file="res://World/dialogueboxwithoutname.png"
+dest_files=[ "res://.import/dialogueboxwithoutname.png-a90bbb507df106a409eff3b4e5c6f2b8.stex" ]
 
 [params]
 
