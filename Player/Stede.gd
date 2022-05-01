@@ -29,8 +29,12 @@ func _physics_process(delta):
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	
 	velocity = move_and_slide(velocity) #FRICTION AND SLIDING TO MOVEMENT
+	if Input.is_action_just_pressed("escape"):
+		var settingsmenu = preload("res://Options.tscn").instance()
+		get_node("../..").add_child(settingsmenu)
 
 
 func _on_ToolButton_pressed():
 	pass # Replace with function body.
+
 
