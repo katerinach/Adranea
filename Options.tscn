@@ -110,21 +110,21 @@ custom_fonts/font = ExtResource( 4 )
 text = "Controls"
 flat = true
 
-[node name="controlsText2" type="Button" parent="."]
-margin_left = 184.0
-margin_top = 95.0
-margin_right = 404.0
-margin_bottom = 115.0
+[node name="walk" type="Button" parent="."]
+margin_left = 176.0
+margin_top = 96.0
+margin_right = 420.0
+margin_bottom = 116.0
 rect_scale = Vector2( 1.36113, 1.36113 )
 mouse_filter = 2
 custom_fonts/font = ExtResource( 4 )
-text = "Walk: WASD (Up, Left, Down, Right)"
+text = "Walk: W,A,S,D - Up, Left, Down, Right)"
 flat = true
 
-[node name="controlsText3" type="Button" parent="."]
-margin_left = 136.0
+[node name="interact" type="Button" parent="."]
+margin_left = 128.0
 margin_top = 128.0
-margin_right = 356.0
+margin_right = 348.0
 margin_bottom = 148.0
 rect_scale = Vector2( 1.36113, 1.36113 )
 mouse_filter = 2
@@ -132,10 +132,10 @@ custom_fonts/font = ExtResource( 4 )
 text = "Interact: Right Click"
 flat = true
 
-[node name="controlsText4" type="Button" parent="."]
-margin_left = 128.0
+[node name="taskbar" type="Button" parent="."]
+margin_left = 120.0
 margin_top = 160.0
-margin_right = 348.0
+margin_right = 340.0
 margin_bottom = 180.0
 rect_scale = Vector2( 1.36113, 1.36113 )
 mouse_filter = 2
@@ -143,10 +143,10 @@ custom_fonts/font = ExtResource( 4 )
 text = "Taskbar: Left Click"
 flat = true
 
-[node name="controlsText5" type="Button" parent="."]
-margin_left = 152.0
+[node name="nextDialogue" type="Button" parent="."]
+margin_left = 144.0
 margin_top = 192.0
-margin_right = 372.0
+margin_right = 364.0
 margin_bottom = 212.0
 rect_scale = Vector2( 1.36113, 1.36113 )
 mouse_filter = 2
@@ -163,8 +163,8 @@ custom_fonts/font = ExtResource( 4 )
 text = "Back"
 
 [connection signal="pressed" from="controlsText" to="." method="_on_backButton_pressed"]
-[connection signal="pressed" from="controlsText2" to="." method="_on_backButton_pressed"]
-[connection signal="pressed" from="controlsText3" to="." method="_on_backButton_pressed"]
-[connection signal="pressed" from="controlsText4" to="." method="_on_backButton_pressed"]
-[connection signal="pressed" from="controlsText5" to="." method="_on_backButton_pressed"]
+[connection signal="pressed" from="walk" to="." method="_on_backButton_pressed"]
+[connection signal="pressed" from="interact" to="." method="_on_backButton_pressed"]
+[connection signal="pressed" from="taskbar" to="." method="_on_backButton_pressed"]
+[connection signal="pressed" from="nextDialogue" to="." method="_on_backButton_pressed"]
 [connection signal="pressed" from="backButton" to="." method="_on_backButton_pressed"]

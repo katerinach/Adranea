@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://World/deskBack.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/recreationalFinal.png" type="Texture" id=2]
@@ -25,6 +25,12 @@
 [ext_resource path="res://NPCs/images/Trixie.png" type="Texture" id=23]
 [ext_resource path="res://NPCs/Susan.gd" type="Script" id=24]
 [ext_resource path="res://NPCs/images/Hunter.png" type="Texture" id=25]
+[ext_resource path="res://World/trashcan.tscn" type="PackedScene" id=26]
+[ext_resource path="res://World/bookStack.tscn" type="PackedScene" id=27]
+[ext_resource path="res://World/waterDispenser.tscn" type="PackedScene" id=28]
+[ext_resource path="res://World/noticePoster.tscn" type="PackedScene" id=29]
+[ext_resource path="res://World/salesPoster.tscn" type="PackedScene" id=30]
+[ext_resource path="res://World/plant.tscn" type="PackedScene" id=31]
 
 [sub_resource type="GDScript" id=16]
 script/source = "extends Node2D
@@ -824,6 +830,42 @@ position = Vector2( 343, 284 )
 [node name="chairRight3" parent="YSort" instance=ExtResource( 19 )]
 position = Vector2( 231, 284 )
 
+[node name="trashcan" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 200, 97 )
+
+[node name="trashcan2" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 312, 281 )
+
+[node name="trashcan4" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 88, 97 )
+
+[node name="trashcan3" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 88, 281 )
+
+[node name="bookStack" parent="YSort" instance=ExtResource( 27 )]
+position = Vector2( 197, 273 )
+
+[node name="bookStack2" parent="YSort" instance=ExtResource( 27 )]
+position = Vector2( 371, 99 )
+
+[node name="noticePoster" parent="YSort" instance=ExtResource( 29 )]
+position = Vector2( 200, 9 )
+
+[node name="noticePoster2" parent="YSort" instance=ExtResource( 29 )]
+position = Vector2( 48, 9 )
+
+[node name="salesPoster" parent="YSort" instance=ExtResource( 30 )]
+position = Vector2( 240, 9 )
+
+[node name="plant" parent="YSort" instance=ExtResource( 31 )]
+position = Vector2( 264, 97 )
+
+[node name="waterDispenser" parent="YSort" instance=ExtResource( 28 )]
+position = Vector2( 80, 17 )
+
+[node name="waterDispenser2" parent="YSort" instance=ExtResource( 28 )]
+position = Vector2( 408, 17 )
+
 [node name="Rob" type="Area2D" parent="YSort"]
 position = Vector2( 250, 158 )
 scale = Vector2( 5, 5 )
@@ -850,7 +892,7 @@ scale = Vector2( 5, 5 )
 script = ExtResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Barbara"]
-position = Vector2( 0.199998, 0.2 )
+position = Vector2( 0.400001, 0.600001 )
 shape = SubResource( 29 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/Barbara"]

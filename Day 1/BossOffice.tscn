@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://World/DeskLeft.tscn" type="PackedScene" id=1]
 [ext_resource path="res://NPCs/Tyrell.gd" type="Script" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://World/chairLeft.tscn" type="PackedScene" id=9]
 [ext_resource path="res://NPCs/pngwing.com (1).png" type="Texture" id=10]
 [ext_resource path="res://NPCs/npcmale.png" type="Texture" id=11]
+[ext_resource path="res://World/trashcan.tscn" type="PackedScene" id=12]
+[ext_resource path="res://World/salesPoster.tscn" type="PackedScene" id=13]
 
 [sub_resource type="GDScript" id=16]
 script/source = "extends Node2D
@@ -476,6 +478,12 @@ position = Vector2( 73, 81 )
 
 [node name="chairLeft" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 54, 78 )
+
+[node name="trashcan" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 72, 104 )
+
+[node name="salesPoster" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 80, -8 )
 
 [node name="Control" parent="YSort" instance=ExtResource( 8 )]
 
