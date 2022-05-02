@@ -19,6 +19,8 @@ func _ready():
 	
 func _process(delta):
 	$QuestionMark.visible = active
+	if Global.hunter_task == true and Global.telephone_task == true and Global.computer_task == true and Global.boss_task == true and Global.coffee_task == true:
+		get_tree().paused = false
 
 func _input(event):
  if event is InputEventMouseButton:

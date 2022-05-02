@@ -24,8 +24,8 @@ func _ready():
 func _process(delta):
 	if hunter_task == true and telephone_task == true and computer_task == true and boss_task == true and coffee_task == true:
 		task_parent.paused = false
+		hunter_task = false
 		get_tree().change_scene("res://GodotCredits.tscn")
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
