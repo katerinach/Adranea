@@ -25,7 +25,7 @@
 			"character": "character-1650634410.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "[Player’s Name],right? I’m Hunter, your department’s manager. How are you finding the office? We even have a room for recreational activities during break time.\n Back to business though, we need to go over the customer reviews and delete the negative ones.\n"
+			"text": "Stede, right? I’m Hunter, your department’s manager. How are you finding the office? We even have a room for recreational activities during break time.\n Back to business though, we need to go over the customer reviews and delete the negative ones.\n"
 		},
 		{
 			"event_id": "dialogic_023",

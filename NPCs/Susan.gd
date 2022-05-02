@@ -13,16 +13,16 @@ var timeline_name
 func _ready():
 	connect("body_entered", self, "_on_NPC_body_entered")
 	connect("body_exited", self, "_on_NPC_body_exited")
-
+	
 	
 func _process(delta):
 	$QuestionMark.visible = active
 	if Global.susan_index == 1:
-		var dialog = Dialogic.start("Susan-" + str(Global.susan_index))
+		timeline_name ="Susan-" + str(Global.susan_index)
+		var dialog = Dialogic.start(timeline_name)
 		dialog.pause_mode = PAUSE_MODE_PROCESS
 		get_parent().add_child(dialog)
 		dialog.connect("timeline_end", self, "end_dialog")
-		get_tree().paused = false
 		Global.susan_index = Global.susan_index + 1
 	
 

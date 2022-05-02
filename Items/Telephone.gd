@@ -20,6 +20,7 @@ func _input(event):
 						dialog.connect("timeline_end", self, "end_dialog")
 						get_tree().paused = true
 						Global.telephone_task = true
+						Global.task_parent = self.get_tree()
 						dialogic_index = dialogic_index +1 
 						
 func _ready():

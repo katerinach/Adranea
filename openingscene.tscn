@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://World/A_black_image.jpg.webp" type="Texture" id=1]
+[ext_resource path="res://openingscene.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+position = Vector2( 272, 174 )
+texture = ExtResource( 1 )
+
+[connection signal="ready" from="Area2D" to="Area2D" method="_on_Area2D_ready"]

@@ -19,6 +19,7 @@ func _input(event):
 					dialog.connect("timeline_end", self, "after_dialog")
 					get_tree().paused = true
 					Global.coffee_task = true
+					Global.task_parent = self.get_tree()
 					if dialogic_index != 1:
 						dialogic_index = dialogic_index +1 
 						

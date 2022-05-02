@@ -17,7 +17,7 @@ func _ready():
 
 
 func _on_startButton_pressed():
-	get_tree().change_scene("res://Day 1/Office1.tscn")
+	get_tree().change_scene("res://openingscene.tscn")
 
 
 func _on_optionsButton_pressed():

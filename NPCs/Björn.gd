@@ -42,7 +42,6 @@ func _input(event):
 					get_parent().add_child(dialog)
 					dialog.connect("timeline_end", self, "end_dialog")
 					get_tree().paused = true
-					get_tree().paused = false
 					if dialogic_index != 2:
 						dialogic_index = dialogic_index +1
 

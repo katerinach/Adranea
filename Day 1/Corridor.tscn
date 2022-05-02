@@ -360,10 +360,11 @@ frame = 1
 position = Vector2( 400, 96 )
 
 [node name="Control" parent="YSort" instance=ExtResource( 1 )]
-margin_left = 406.0
-margin_top = -22.1948
-margin_right = 446.0
-margin_bottom = 17.8052
+margin_left = 417.0
+margin_top = -21.0267
+margin_right = 457.0
+margin_bottom = 18.9733
+rect_scale = Vector2( 0.903631, 1.03225 )
 
 [node name="Office2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 245, 343 )

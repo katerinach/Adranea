@@ -21,7 +21,7 @@ func _process(delta):
 
 func _input(event):
  if event is InputEventMouseButton:
-		if event.button_index == BUTTON_RIGHT:
+		if event.button_index == BUTTON_LEFT:
 			if event.pressed:
 				if active == true:
 					pos_temp = int(pos.x) - 20

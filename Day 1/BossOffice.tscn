@@ -494,7 +494,8 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Tyrell"]
-position = Vector2( 0.199998, 0.2 )
+position = Vector2( 0.6, 3.6 )
+scale = Vector2( 0.976461, 1.27214 )
 shape = SubResource( 27 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/Tyrell"]

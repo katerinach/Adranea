@@ -48,6 +48,7 @@ func _input(event):
 						dialogic_index = dialogic_index +1
 						task_complete = true
 						Global.hunter_task = true
+						Global.task_parent = self.get_tree()
 
 			
 func _on_NPC_body_entered(body):

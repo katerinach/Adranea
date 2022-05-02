@@ -29,7 +29,11 @@ func _ready():
 	else: 
 		self.add_image(t,10,10)
 	add_text(" Inspect company data analytics\n\n")
-	self.add_image(t,10,10)
+	if Global.coffee_task== true: 
+		self.add_image(t_done,10,10) 
+	else: 
+		self.add_image(t,10,10)
+	add_text(" Inspect company data analytics\n\n")
 	add_text(" Have a coffee break")
 	request_ready()
 
@@ -58,7 +62,10 @@ func _process(delta):
 	else: 
 		self.add_image(t,10,10)
 	add_text(" Inspect company data analytics\n\n")
-	self.add_image(t,10,10)
+	if Global.coffee_task== true: 
+		self.add_image(t_done,10,10) 
+	else: 
+		self.add_image(t,10,10)
 	add_text(" Have a coffee break")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

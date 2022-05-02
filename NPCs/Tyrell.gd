@@ -23,7 +23,6 @@ func _input(event):
 		if event.button_index == BUTTON_LEFT:
 			if event.pressed:
 				if active == true:
-					Global.boss_task = true
 					if abs(pos.x - self.position.x) <60 and abs(pos.x - self.position.x-10)>20:
 						if pos.x >= self.position.x:
 							$Sprite.set_frame(1)
@@ -40,6 +39,8 @@ func _input(event):
 					get_parent().add_child(dialog)
 					dialog.connect("timeline_end", self, "end_dialog")
 					get_tree().paused = true
+					Global.boss_task = true
+					Global.task_parent = self.get_tree()
 					if dialogic_index != 2:
 						dialogic_index = dialogic_index +1
 
