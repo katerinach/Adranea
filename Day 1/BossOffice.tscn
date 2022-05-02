@@ -8,8 +8,8 @@
 [ext_resource path="res://Player/Stede.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Day 1/Entrance.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/Control.tscn" type="PackedScene" id=8]
+[ext_resource path="res://NPCs/images/mainnpcs.png" type="Texture" id=9]
 [ext_resource path="res://NPCs/pngwing.com (1).png" type="Texture" id=10]
-[ext_resource path="res://NPCs/npcmale.png" type="Texture" id=11]
 [ext_resource path="res://World/trashcan.tscn" type="PackedScene" id=12]
 [ext_resource path="res://World/salesPoster.tscn" type="PackedScene" id=13]
 [ext_resource path="res://World/deskBack.tscn" type="PackedScene" id=14]
@@ -499,16 +499,15 @@ scale = Vector2( 0.976461, 1.27214 )
 shape = SubResource( 27 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/Tyrell"]
-position = Vector2( 0.200195, -4.80005 )
+position = Vector2( 0.600098, -6.20007 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="YSort/Tyrell"]
-position = Vector2( 0.799992, -2 )
+position = Vector2( 0.399994, 0.399998 )
 scale = Vector2( 0.22, 0.22 )
-texture = ExtResource( 11 )
-hframes = 8
-vframes = 4
+texture = ExtResource( 9 )
+hframes = 4
 
 [node name="Control" parent="YSort" instance=ExtResource( 8 )]
 margin_left = 408.0
