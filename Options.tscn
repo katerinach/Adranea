@@ -25,6 +25,16 @@ position = Vector2( 298, 176 )
 scale = Vector2( 0.967951, 0.967951 )
 texture = ExtResource( 5 )
 
+[node name="bgBoard3" type="Sprite" parent="."]
+position = Vector2( 192, 136 )
+scale = Vector2( 0.967951, 0.967951 )
+texture = ExtResource( 5 )
+
+[node name="bgBoard4" type="Sprite" parent="."]
+position = Vector2( 424, 136 )
+scale = Vector2( 0.967951, 0.967951 )
+texture = ExtResource( 5 )
+
 [node name="board" type="Sprite" parent="."]
 position = Vector2( 280, 178 )
 scale = Vector2( 0.846449, 0.846449 )
@@ -36,10 +46,10 @@ scale = Vector2( 1.62895, 1.58217 )
 texture = ExtResource( 6 )
 
 [node name="controlsText" type="Button" parent="."]
-margin_left = 199.0
-margin_top = 43.8436
-margin_right = 298.0
-margin_bottom = 63.8436
+margin_left = 208.0
+margin_top = 32.0
+margin_right = 307.0
+margin_bottom = 52.0
 rect_scale = Vector2( 1.66417, 1.66417 )
 mouse_filter = 2
 custom_fonts/font = ExtResource( 4 )
@@ -48,9 +58,9 @@ flat = true
 
 [node name="walk" type="Button" parent="."]
 margin_left = 120.0
-margin_top = 81.8436
+margin_top = 104.0
 margin_right = 364.0
-margin_bottom = 101.844
+margin_bottom = 124.0
 rect_scale = Vector2( 1.36113, 1.36113 )
 mouse_filter = 2
 custom_fonts/font = ExtResource( 4 )
@@ -58,36 +68,14 @@ text = "Walk: W,A,S,D "
 flat = true
 
 [node name="interact" type="Button" parent="."]
-margin_left = 137.0
-margin_top = 117.844
-margin_right = 357.0
-margin_bottom = 137.844
+margin_left = 136.0
+margin_top = 184.0
+margin_right = 356.0
+margin_bottom = 204.0
 rect_scale = Vector2( 1.36113, 1.36113 )
 mouse_filter = 2
 custom_fonts/font = ExtResource( 4 )
-text = "Interact: Right Click"
-flat = true
-
-[node name="taskbar" type="Button" parent="."]
-margin_left = 134.0
-margin_top = 159.844
-margin_right = 354.0
-margin_bottom = 179.844
-rect_scale = Vector2( 1.36113, 1.36113 )
-mouse_filter = 2
-custom_fonts/font = ExtResource( 4 )
-text = "Taskbar: Left Click"
-flat = true
-
-[node name="dialogue" type="Button" parent="."]
-margin_left = 135.0
-margin_top = 198.844
-margin_right = 355.0
-margin_bottom = 218.844
-rect_scale = Vector2( 1.36113, 1.36113 )
-mouse_filter = 2
-custom_fonts/font = ExtResource( 4 )
-text = "Dialogue: Left Click"
+text = "Interact: Left Click"
 flat = true
 
 [node name="backButton" type="Button" parent="."]
@@ -104,6 +92,4 @@ flat = true
 [connection signal="pressed" from="controlsText" to="." method="_on_backButton_pressed"]
 [connection signal="pressed" from="walk" to="." method="_on_backButton_pressed"]
 [connection signal="pressed" from="interact" to="." method="_on_backButton_pressed"]
-[connection signal="pressed" from="taskbar" to="." method="_on_backButton_pressed"]
-[connection signal="pressed" from="dialogue" to="." method="_on_backButton_pressed"]
 [connection signal="pressed" from="backButton" to="." method="_on_backButton_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://World/deskBack.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/recreationalFinal.png" type="Texture" id=2]
@@ -33,6 +33,7 @@
 [ext_resource path="res://World/plant.tscn" type="PackedScene" id=31]
 [ext_resource path="res://World/pcDown.png" type="Texture" id=32]
 [ext_resource path="res://World/phone.png" type="Texture" id=33]
+[ext_resource path="res://controlsMenu.tscn" type="PackedScene" id=34]
 
 [sub_resource type="GDScript" id=16]
 script/source = "extends Node2D
@@ -1057,5 +1058,8 @@ scale = Vector2( 73.0816, -83.5991 )
 
 [node name="Office2Pos2" type="Position2D" parent="."]
 position = Vector2( 489, 227 )
+
+[node name="controlsMenu" parent="." instance=ExtResource( 34 )]
+visible = false
 
 [connection signal="body_entered" from="Office2" to="Office2" method="_on_World_body_entered"]
