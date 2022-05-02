@@ -4,7 +4,7 @@
 [ext_resource path="res://UI/new_theme.tres" type="Theme" id=2]
 [ext_resource path="res://UI/Popup.gd" type="Script" id=3]
 [ext_resource path="res://UI/RichTextLabel.gd" type="Script" id=4]
-[ext_resource path="res://UI/3789946.png" type="Texture" id=5]
+[ext_resource path="res://UI/tasklist_button.png" type="Texture" id=5]
 [ext_resource path="res://Fonts/dialogue_font.tres" type="DynamicFont" id=6]
 
 [node name="Control" type="Control"]
@@ -32,11 +32,13 @@ text = " "
 script = ExtResource( 4 )
 
 [node name="ToolButton" type="ToolButton" parent="."]
-margin_left = 7.0
-margin_top = -4.0
-margin_right = 585.0
-margin_bottom = 516.0
-rect_scale = Vector2( 0.0647529, 0.0596039 )
+margin_left = -5.0
+margin_top = -3.0
+margin_right = 573.0
+margin_bottom = 517.0
+rect_scale = Vector2( 0.0892946, 0.0851726 )
 icon = ExtResource( 5 )
+clip_text = true
+expand_icon = true
 
 [connection signal="pressed" from="ToolButton" to="Window" method="_on_ToolButton_pressed"]

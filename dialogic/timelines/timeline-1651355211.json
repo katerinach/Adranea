@@ -27,6 +27,28 @@
 			"text": "Greetings, Bran. We are very happy to have you on the team.\n\n It’s not Bran? Well, Mark, I'm going to formally introduce myself. I am Tyrell Henderson, the CEO of this company. You had a very impressive interview with us, so we are lucky to have you. Of course, you will be learning a lot of things working for us.\n\nAh yes, unfortunately we can’t hire you until you complete the standard training process. This will take about 6 months…or more. Depending on your efforts. Our company philosophy dictates that we reward hard working individuals. \n\n I know exactly how you feel, I too have started from the bottom before venturing into business. It takes a lot of dedication to succeed in this economy. Nonetheless, I won’t bore you any further. I’ll be keeping a close eye on your progress.\n"
 		},
 		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": false,
+			"wait_seconds": 0.7
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1651487405.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Task Completed!",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Master",
+					"file": "res://audio/mixkit-game-magical-potion-drink-2828.wav",
+					"volume": -10
+				}
+			}
+		},
+		{
 			"event_id": "dialogic_022",
 			"transition_duration": 1
 		}

@@ -4,12 +4,12 @@
 [ext_resource path="res://Day 1/Entrance.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=3]
 [ext_resource path="res://World/toiletsFinal.png" type="Texture" id=4]
-[ext_resource path="res://NPCs/Steve.gd" type="Script" id=5]
+[ext_resource path="res://NPCs/Bob.gd" type="Script" id=5]
 [ext_resource path="res://Player/Stede.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/officeFinal.png" type="Texture" id=7]
 [ext_resource path="res://NPCs/pngwing.com (1).png" type="Texture" id=8]
 [ext_resource path="res://UI/Control.tscn" type="PackedScene" id=9]
-[ext_resource path="res://NPCs/images/Rob.png" type="Texture" id=10]
+[ext_resource path="res://NPCs/images/Steve.png" type="Texture" id=10]
 
 [sub_resource type="GDScript" id=16]
 script/source = "extends Node2D
@@ -327,7 +327,7 @@ points = PoolVector2Array( 0, 16, 24, 16, 24, 48, 0, 48 )
 radius = 6.00333
 
 [node name="MensToilet" type="Node2D"]
-position = Vector2( -64, -120 )
+position = Vector2( -46, -118 )
 scale = Vector2( 1.45262, 1.45262 )
 script = SubResource( 16 )
 
@@ -364,32 +364,32 @@ position = Vector2( 120, 88 )
 [node name="Sign" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 268, 92 )
 
-[node name="Control" parent="YSort" instance=ExtResource( 9 )]
-margin_left = 267.0
-margin_top = 4.0
-margin_right = 307.0
-margin_bottom = 44.0
-
-[node name="Rob" type="Area2D" parent="YSort"]
+[node name="Bob" type="Area2D" parent="YSort"]
 position = Vector2( 218.082, 50.3707 )
 scale = Vector2( 5, 5 )
 script = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Rob"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Bob"]
 position = Vector2( 0.199998, 0.2 )
 shape = SubResource( 22 )
 
-[node name="QuestionMark" type="Sprite" parent="YSort/Rob"]
+[node name="QuestionMark" type="Sprite" parent="YSort/Bob"]
 position = Vector2( 0.599609, -6.3999 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 8 )
 
-[node name="Sprite" type="Sprite" parent="YSort/Rob"]
-position = Vector2( 0.399994, 0.400002 )
+[node name="Sprite" type="Sprite" parent="YSort/Bob"]
+position = Vector2( -0.275345, 0.137672 )
 scale = Vector2( 0.22, 0.22 )
 texture = ExtResource( 10 )
 hframes = 4
 frame = 3
+
+[node name="Control" parent="YSort" instance=ExtResource( 9 )]
+margin_left = 267.648
+margin_top = 0.11664
+margin_right = 307.648
+margin_bottom = 40.1166
 
 [node name="Office2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 54, 180 )

@@ -6,7 +6,7 @@
 radius = 4.0
 height = 6.0
 
-[node name="Sign" type="StaticBody2D"]
+[node name="Sign" type="Area2D"]
 position = Vector2( 266, 95 )
 
 [node name="Sprite" type="Sprite" parent="."]

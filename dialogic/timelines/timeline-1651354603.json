@@ -8,7 +8,61 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You began reviewing the company's data analytics.\n\n.....\n\n It appears that users over forty tend to prefer our wig selection. They are tagged as “midlife crisis”.\n\n.......\n\nMy little horsey merchandise seems to be prefered by men over 25. \n\n......"
+			"text": "You began reviewing the company's data analytics.\n.....\n It appears that users over forty tend to prefer our wig selection. They are tagged as “midlife crisis”.\n.......\nMy little horsey merchandise seems to be prefered by men over 25. \n......",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Master",
+					"file": "res://audio/mixkit-fast-keyboard-typing-1387.wav",
+					"volume": -10
+				},
+				"1": {
+					"audio_bus": "Master",
+					"file": "res://audio/mixkit-fast-keyboard-typing-1387.wav",
+					"volume": -10
+				},
+				"2": {
+					"audio_bus": "Master",
+					"file": "res://audio/mixkit-fast-keyboard-typing-1387.wav",
+					"volume": -10
+				},
+				"3": {
+					"audio_bus": "Master",
+					"file": "res://audio/mixkit-fast-keyboard-typing-1387.wav",
+					"volume": -10
+				},
+				"4": {
+					"audio_bus": "Master",
+					"file": "",
+					"volume": -10
+				},
+				"5": {
+					"audio_bus": "Master",
+					"file": "",
+					"volume": -10
+				}
+			}
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": false,
+			"wait_seconds": 0.7
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1651487405.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Task Completed!",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Master",
+					"file": "res://audio/mixkit-game-magical-potion-drink-2828.wav",
+					"volume": -10
+				}
+			}
 		},
 		{
 			"event_id": "dialogic_022",

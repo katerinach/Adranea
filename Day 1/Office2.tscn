@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=69 format=2]
 
 [ext_resource path="res://World/deskBack.tscn" type="PackedScene" id=1]
 [ext_resource path="res://NPCs/Hunter.gd" type="Script" id=2]
@@ -41,6 +41,7 @@
 [ext_resource path="res://World/recreationalKitchenAssets.png" type="Texture" id=39]
 [ext_resource path="res://World/coffeeMaker.png" type="Texture" id=40]
 [ext_resource path="res://World/Telephone.tscn" type="PackedScene" id=41]
+[ext_resource path="res://Items/coffeMaker.gd" type="Script" id=42]
 
 [sub_resource type="GDScript" id=16]
 script/source = "extends Node2D
@@ -729,9 +730,8 @@ points = PoolVector2Array( 16, 16, 8, 16, 8, 0, 16, 0 )
 [sub_resource type="CircleShape2D" id=15]
 radius = 6.00333
 
-[sub_resource type="CapsuleShape2D" id=25]
-radius = 8.0
-height = 0.0
+[sub_resource type="RectangleShape2D" id=31]
+extents = Vector2( 10, 19.5 )
 
 [sub_resource type="CapsuleShape2D" id=29]
 radius = 5.0
@@ -963,8 +963,6 @@ scale = Vector2( 0.22, 0.22 )
 texture = ExtResource( 26 )
 hframes = 4
 
-[node name="Control" parent="YSort" instance=ExtResource( 17 )]
-
 [node name="Björn" type="Area2D" parent="YSort"]
 position = Vector2( 368, 59 )
 scale = Vector2( 5, 5 )
@@ -989,8 +987,9 @@ hframes = 4
 
 [node name="Telephone" parent="YSort" instance=ExtResource( 41 )]
 
-[node name="coffeMaker" type="StaticBody2D" parent="YSort"]
+[node name="coffeMaker" type="Area2D" parent="YSort"]
 position = Vector2( 440, 8 )
+script = ExtResource( 42 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -999,7 +998,13 @@ __meta__ = {
 texture = ExtResource( 40 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/coffeMaker"]
-shape = SubResource( 25 )
+position = Vector2( 0, 9.5 )
+shape = SubResource( 31 )
+
+[node name="QuestionMark" type="Sprite" parent="YSort/coffeMaker"]
+position = Vector2( 1, -16 )
+scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 11 )
 
 [node name="pcAsset" type="StaticBody2D" parent="YSort"]
 position = Vector2( 152, 256 )
@@ -1042,6 +1047,12 @@ texture = ExtResource( 29 )
 position = Vector2( 0, 2 )
 rotation = -1.5708
 shape = SubResource( 30 )
+
+[node name="Control2" parent="YSort" instance=ExtResource( 17 )]
+margin_left = 450.0
+margin_top = 265.0
+margin_right = 490.0
+margin_bottom = 305.0
 
 [node name="Office1" parent="." instance=ExtResource( 23 )]
 position = Vector2( -28, 114 )

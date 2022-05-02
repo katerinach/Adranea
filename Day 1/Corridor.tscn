@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://UI/Control.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Day 1/Entrance.tscn" type="PackedScene" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://World/office.png" type="Texture" id=4]
 [ext_resource path="res://Player/Stede.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World/officeFinal.png" type="Texture" id=6]
-[ext_resource path="res://NPCs/Marios.gd" type="Script" id=7]
 [ext_resource path="res://World/DeskLeft.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World/chairLeft.tscn" type="PackedScene" id=9]
 [ext_resource path="res://NPCs/pngwing.com (1).png" type="Texture" id=10]
@@ -17,7 +16,7 @@
 [ext_resource path="res://World/Sign.tscn" type="PackedScene" id=15]
 [ext_resource path="res://World/bushPlant.tscn" type="PackedScene" id=16]
 [ext_resource path="res://World/trashcan.tscn" type="PackedScene" id=17]
-[ext_resource path="res://World/waterDispenser.tscn" type="PackedScene" id=18]
+[ext_resource path="res://NPCs/Marios.gd" type="Script" id=19]
 
 [sub_resource type="GDScript" id=16]
 script/source = "extends Node2D
@@ -32,7 +31,7 @@ script/source = "extends Node2D
 func _ready():
 	if Global.from_scene != null:
 		get_node(\"YSort/Stede\").set_position(get_node(Global.from_scene +'Pos').position)
-		
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -283,7 +282,8 @@ points = PoolVector2Array( 16, 16, 8, 16, 8, 0, 16, 0 )
 radius = 6.00333
 
 [node name="Corridor" type="Node2D"]
-position = Vector2( 24, 32 )
+position = Vector2( 26, 27 )
+scale = Vector2( 1, 0.856056 )
 script = SubResource( 16 )
 
 [node name="Background" type="Sprite" parent="."]
@@ -331,35 +331,6 @@ position = Vector2( 304, -8 )
 [node name="trashcan" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( 208, 88 )
 
-[node name="waterDispenser" parent="YSort" instance=ExtResource( 18 )]
-position = Vector2( 104, 0 )
-
-[node name="Control" parent="YSort" instance=ExtResource( 1 )]
-margin_left = 432.0
-margin_top = -16.0
-margin_right = 472.0
-margin_bottom = 24.0
-
-[node name="Marios" type="Area2D" parent="YSort"]
-position = Vector2( 340, 78 )
-scale = Vector2( 5, 5 )
-script = ExtResource( 7 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Marios"]
-position = Vector2( 0.199998, 0.2 )
-shape = SubResource( 23 )
-
-[node name="QuestionMark" type="Sprite" parent="YSort/Marios"]
-position = Vector2( 0.599609, -6.3999 )
-scale = Vector2( 0.01, 0.01 )
-texture = ExtResource( 10 )
-
-[node name="Sprite" type="Sprite" parent="YSort/Marios"]
-position = Vector2( 0.399994, 0.400002 )
-scale = Vector2( 0.22, 0.22 )
-texture = ExtResource( 11 )
-hframes = 4
-
 [node name="Charlotte" type="Area2D" parent="YSort"]
 position = Vector2( 191, 50 )
 scale = Vector2( 5, 5 )
@@ -381,6 +352,15 @@ texture = ExtResource( 13 )
 hframes = 4
 frame = 1
 
+[node name="Sign" parent="YSort" instance=ExtResource( 15 )]
+position = Vector2( 400, 96 )
+
+[node name="Control" parent="YSort" instance=ExtResource( 1 )]
+margin_left = 422.0
+margin_top = -17.5222
+margin_right = 462.0
+margin_bottom = 22.4778
+
 [node name="Office2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 245, 343 )
 rotation = 1.5708
@@ -398,8 +378,26 @@ scale = Vector2( -0.720705, 0.0352298 )
 [node name="BossOfficePos" type="Position2D" parent="."]
 position = Vector2( 248, 26 )
 
-[node name="Sign" parent="." instance=ExtResource( 15 )]
-position = Vector2( 400, 96 )
+[node name="Marios" type="Area2D" parent="."]
+position = Vector2( 359, 73.5934 )
+scale = Vector2( 5, 5 )
+script = ExtResource( 19 )
+
+[node name="QuestionMark" type="Sprite" parent="Marios"]
+position = Vector2( 0.599609, -6.3999 )
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Marios"]
+position = Vector2( 0.200005, 0.980595 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 23 )
+
+[node name="Sprite" type="Sprite" parent="Marios"]
+position = Vector2( 0.399994, 1.63541 )
+scale = Vector2( 0.213449, 0.22 )
+texture = ExtResource( 11 )
+hframes = 4
 
 [connection signal="body_entered" from="Office2" to="Office2" method="_on_World_body_entered"]
 [connection signal="body_entered" from="BossOffice" to="BossOffice" method="_on_BossOffice_body_entered"]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mixkit-game-magical-potion-drink-2828.wav-576a05aa9ab11db0f8be4648ff84464a.sample"
+
+[deps]
+
+source_file="res://audio/mixkit-game-magical-potion-drink-2828.wav"
+dest_files=[ "res://.import/mixkit-game-magical-potion-drink-2828.wav-576a05aa9ab11db0f8be4648ff84464a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

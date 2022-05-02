@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mixkit-sip-of-water-1307.wav-8c56ab437289bffd0278ecc11e261028.sample"
+
+[deps]
+
+source_file="res://audio/mixkit-sip-of-water-1307.wav"
+dest_files=[ "res://.import/mixkit-sip-of-water-1307.wav-8c56ab437289bffd0278ecc11e261028.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

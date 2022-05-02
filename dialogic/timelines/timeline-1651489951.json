@@ -1,0 +1,53 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1651350964.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " Coffee is the essence of life.",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Master",
+					"file": "res://audio/mixkit-sip-of-water-1307.wav",
+					"volume": -10
+				}
+			}
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 0.7
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1651487405.cfg"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://audio/mixkit-game-magical-potion-drink-2828.wav",
+			"volume": -10
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Task Completed!"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1651489951.json",
+		"name": "Coffee-1"
+	}
+}

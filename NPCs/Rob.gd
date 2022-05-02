@@ -8,6 +8,7 @@ var active = false
 var dialogic_index = 1
 var first_frame
 var pos
+var timeline_name
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	connect("body_entered", self, "_on_NPC_body_entered")
@@ -19,7 +20,7 @@ func _process(delta):
 
 func _input(event):
  if event is InputEventMouseButton:
-		if event.button_index == BUTTON_RIGHT:
+		if event.button_index == BUTTON_LEFT:
 			if event.pressed:
 				if active == true:
 					if dialogic_index <=2:
@@ -34,14 +35,13 @@ func _input(event):
 							else:
 								$Sprite.set_frame(3)
 					
-						
-					var dialog = Dialogic.start("Rob-" + str(dialogic_index))
+					timeline_name = 	"Rob-" + str(dialogic_index)
+					var dialog = Dialogic.start(timeline_name)
 					dialog.pause_mode = PAUSE_MODE_PROCESS
 					get_parent().add_child(dialog)
 					dialog.connect("timeline_end", self, "end_dialog")
 					get_tree().paused = true
-					get_tree().paused = false
-					if dialogic_index != 4:
+					if dialogic_index != 2:
 						dialogic_index = dialogic_index +1
 
 			
@@ -57,6 +57,8 @@ func _on_NPC_body_exited(body):
 	_sprite.set_frame(0)
 	
 
+func end_dialog(timeline_name):
+	get_tree().paused = false 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

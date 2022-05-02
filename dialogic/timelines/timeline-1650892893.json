@@ -25,6 +25,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "I have nothing to say to you."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		}
 	],
 	"metadata": {

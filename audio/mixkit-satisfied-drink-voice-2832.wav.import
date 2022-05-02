@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mixkit-satisfied-drink-voice-2832.wav-18c56605e8a992a45d05480072292884.sample"
+
+[deps]
+
+source_file="res://audio/mixkit-satisfied-drink-voice-2832.wav"
+dest_files=[ "res://.import/mixkit-satisfied-drink-voice-2832.wav-18c56605e8a992a45d05480072292884.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

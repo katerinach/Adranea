@@ -8,7 +8,40 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": " dialing…\n\nWelcome to Funkin Fonuts! Home of the best nuts in the country. How may we help you today?\n\nYou again??? Listen here you little @#snwdj, if you ever call us again we’re going to crush your little nuts to pieces. WE.ARE.NOT.INTERESTED.\n\n*They hanged up*\n"
+			"text": " dialing…\nWelcome to Funkin Fonuts! Home of the best nuts in the country. How may we help you today?\nYou again??? Listen here you little @#snwdj, if you ever call us again we’re going to crush your little nuts to pieces. WE.ARE.NOT.INTERESTED.\n*They hanged up*\n",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Master",
+					"file": "res://audio/mixkit-old-telephone-ring-1357.wav",
+					"volume": -20
+				},
+				"1": {
+					"audio_bus": "Master",
+					"file": "res://audio/mixkit-old-telephone-ring-1357.wav"
+				}
+			}
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": false,
+			"wait_seconds": 0.7
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1651487405.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Task Completed",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Master",
+					"file": "res://audio/mixkit-game-magical-potion-drink-2828.wav",
+					"volume": -10
+				}
+			}
 		},
 		{
 			"event_id": "dialogic_022",
