@@ -25,17 +25,17 @@ var credits = [
 		"Adranea by Goldfish Tea Studio"
 	],[
 		"Programming",
-		"Glykeria Fountoukidou / hazelnut99 @ itch.io",
-		"Katerina Chatzilazarou / g0ldfish @ itch.io"
+		"Glykeria Fountoukidou - hazelnut99 at itch.io",
+		"Katerina Chatzilazarou - g0ldfish at itch.io"
 	],[
 		"Art",
-		"Anna Papadopoulou / b0batea @ itch.io",
-		"Katerina Chatzilazarou / g0ldfish @ itch.io"
+		"Anna Papadopoulou - b0batea at itch.io",
+		"Katerina Chatzilazarou - g0ldfish at itch.io"
 	],
 	[
 		"Story",
-		"Anna Papadopoulou / b0batea @ itch.io",
-		"Katerina Chatzilazarou / g0ldfish @ itch.io"
+		"Anna Papadopoulou - b0batea at itch.io",
+		"Katerina Chatzilazarou - g0ldfish at itch.io"
 	],
 	[
 		"Sound Effects",
