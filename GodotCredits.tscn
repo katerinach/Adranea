@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://GodotCredits.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/pixel_font.tres" type="DynamicFont" id=2]
+
+[sub_resource type="Theme" id=1]
+Fonts/fonts/normal = ExtResource( 2 )
+
+[node name="GodotCredits" type="Node2D"]
+position = Vector2( -216, -198 )
+scale = Vector2( 0.517961, 0.517961 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="CreditsContainer" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+theme = SubResource( 1 )
+
+[node name="Line" type="Label" parent="CreditsContainer"]
+anchor_right = 1.0
+margin_left = -326.28
+margin_top = 1080.0
+margin_right = -326.28
+margin_bottom = 1094.0
+rect_scale = Vector2( 1.33579, 1.33579 )
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Credits line"
+align = 1

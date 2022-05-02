@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://World/deskBack.tscn" type="PackedScene" id=1]
 [ext_resource path="res://NPCs/Hunter.gd" type="Script" id=2]
@@ -24,13 +24,13 @@
 [ext_resource path="res://NPCs/images/Gary.png" type="Texture" id=22]
 [ext_resource path="res://Day 1/Entrance.tscn" type="PackedScene" id=23]
 [ext_resource path="res://World/pcDown.png" type="Texture" id=24]
-[ext_resource path="res://Items/pcDown.gd" type="Script" id=25]
+[ext_resource path="res://World/officePC.png" type="Texture" id=25]
 [ext_resource path="res://NPCs/images/Caleb.png" type="Texture" id=26]
 [ext_resource path="res://NPCs/images/Tina.png" type="Texture" id=27]
 [ext_resource path="res://NPCs/Björn.gd" type="Script" id=28]
 [ext_resource path="res://World/phone.png" type="Texture" id=29]
 [ext_resource path="res://NPCs/images/bjorn.png" type="Texture" id=30]
-[ext_resource path="res://Items/Telephone.gd" type="Script" id=31]
+[ext_resource path="res://World/pcDown.tscn" type="PackedScene" id=31]
 [ext_resource path="res://World/waterDispenser.tscn" type="PackedScene" id=32]
 [ext_resource path="res://World/salesPoster.tscn" type="PackedScene" id=33]
 [ext_resource path="res://World/bookStack.tscn" type="PackedScene" id=34]
@@ -40,6 +40,7 @@
 [ext_resource path="res://World/trashcan.tscn" type="PackedScene" id=38]
 [ext_resource path="res://World/recreationalKitchenAssets.png" type="Texture" id=39]
 [ext_resource path="res://World/coffeeMaker.png" type="Texture" id=40]
+[ext_resource path="res://World/Telephone.tscn" type="PackedScene" id=41]
 
 [sub_resource type="GDScript" id=16]
 script/source = "extends Node2D
@@ -105,6 +106,15 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 16, 16, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=21]
 points = PoolVector2Array( 16, 32, 0, 32, 0, 16, 16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=26]
+points = PoolVector2Array( 16, 32, 0, 32, 0, 16, 16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=27]
+points = PoolVector2Array( 16, 32, 0, 32, 0, 16, 16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=28]
+points = PoolVector2Array( 24, 16, 0, 16, 0, 8, 24, 8 )
 
 [sub_resource type="ConvexPolygonShape2D" id=13]
 points = PoolVector2Array( 8, 16, 0, 16, 0, 0, 8, 0 )
@@ -652,16 +662,84 @@ points = PoolVector2Array( 16, 16, 8, 16, 8, 0, 16, 0 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 42/z_index = 0
+43/name = "officePC.png 43"
+43/texture = ExtResource( 25 )
+43/tex_offset = Vector2( 0, 0 )
+43/modulate = Color( 1, 1, 1, 1 )
+43/region = Rect2( 204, 113, 16, 32 )
+43/tile_mode = 0
+43/occluder_offset = Vector2( 0, 0 )
+43/navigation_offset = Vector2( 0, 0 )
+43/shape_offset = Vector2( 0, 0 )
+43/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+43/shape = SubResource( 26 )
+43/shape_one_way = false
+43/shape_one_way_margin = 1.0
+43/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 26 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+43/z_index = 0
+44/name = "officePC.png 44"
+44/texture = ExtResource( 25 )
+44/tex_offset = Vector2( 0, 0 )
+44/modulate = Color( 1, 1, 1, 1 )
+44/region = Rect2( 220, 113, 16, 32 )
+44/tile_mode = 0
+44/occluder_offset = Vector2( 0, 0 )
+44/navigation_offset = Vector2( 0, 0 )
+44/shape_offset = Vector2( 0, 0 )
+44/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+44/shape = SubResource( 27 )
+44/shape_one_way = false
+44/shape_one_way_margin = 1.0
+44/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 27 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+44/z_index = 0
+45/name = "officePC.png 45"
+45/texture = ExtResource( 25 )
+45/tex_offset = Vector2( 0, 0 )
+45/modulate = Color( 1, 1, 1, 1 )
+45/region = Rect2( 244, 121, 24, 16 )
+45/tile_mode = 0
+45/occluder_offset = Vector2( 0, 0 )
+45/navigation_offset = Vector2( 0, 0 )
+45/shape_offset = Vector2( 0, 0 )
+45/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+45/shape = SubResource( 28 )
+45/shape_one_way = false
+45/shape_one_way_margin = 1.0
+45/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 28 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+45/z_index = 0
 
 [sub_resource type="CircleShape2D" id=15]
 radius = 6.00333
 
-[sub_resource type="RectangleShape2D" id=18]
-extents = Vector2( 14, 13.5 )
-
 [sub_resource type="CapsuleShape2D" id=25]
 radius = 8.0
 height = 0.0
+
+[sub_resource type="CapsuleShape2D" id=29]
+radius = 5.0
+height = 8.0
+
+[sub_resource type="CapsuleShape2D" id=30]
+radius = 4.0
+height = 8.0
 
 [node name="Office2" type="Node2D"]
 position = Vector2( 32, 32 )
@@ -907,43 +985,9 @@ scale = Vector2( 0.22, 0.22 )
 texture = ExtResource( 30 )
 hframes = 4
 
-[node name="pcDown" type="Area2D" parent="YSort"]
-position = Vector2( 336, 254 )
-script = ExtResource( 25 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="pcDown" parent="YSort" instance=ExtResource( 31 )]
 
-[node name="Sprite" type="Sprite" parent="YSort/pcDown"]
-texture = ExtResource( 24 )
-
-[node name="QuestionMark" type="Sprite" parent="YSort/pcDown"]
-position = Vector2( 1, -14 )
-scale = Vector2( 0.03, 0.03 )
-texture = ExtResource( 11 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/pcDown"]
-position = Vector2( -5, -5 )
-shape = SubResource( 18 )
-
-[node name="Telephone" type="Area2D" parent="YSort"]
-position = Vector2( 353, 252 )
-script = ExtResource( 31 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="YSort/Telephone"]
-texture = ExtResource( 29 )
-
-[node name="QuestionMark" type="Sprite" parent="YSort/Telephone"]
-position = Vector2( 0, -13 )
-scale = Vector2( 0.03, 0.03 )
-texture = ExtResource( 11 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Telephone"]
-position = Vector2( 4, -3.5 )
-shape = SubResource( 18 )
+[node name="Telephone" parent="YSort" instance=ExtResource( 41 )]
 
 [node name="coffeMaker" type="StaticBody2D" parent="YSort"]
 position = Vector2( 440, 8 )
@@ -956,6 +1000,48 @@ texture = ExtResource( 40 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/coffeMaker"]
 shape = SubResource( 25 )
+
+[node name="pcAsset" type="StaticBody2D" parent="YSort"]
+position = Vector2( 152, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="YSort/pcAsset"]
+texture = ExtResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/pcAsset"]
+position = Vector2( 1, 3 )
+rotation = -1.5708
+shape = SubResource( 29 )
+
+[node name="pcAsset2" type="StaticBody2D" parent="YSort"]
+position = Vector2( 56, 256 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="YSort/pcAsset2"]
+texture = ExtResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/pcAsset2"]
+position = Vector2( 1, 3 )
+rotation = -1.5708
+shape = SubResource( 29 )
+
+[node name="telephoneAsset" type="StaticBody2D" parent="YSort"]
+position = Vector2( 239, 252 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="YSort/telephoneAsset"]
+texture = ExtResource( 29 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/telephoneAsset"]
+position = Vector2( 0, 2 )
+rotation = -1.5708
+shape = SubResource( 30 )
 
 [node name="Office1" parent="." instance=ExtResource( 23 )]
 position = Vector2( -28, 114 )
