@@ -35,12 +35,12 @@ func _input(event):
 						if pos.x >= self.position.x:
 							$Sprite.set_frame(1)
 						else:
-							$Sprite.set_frame(2)
+							$Sprite.set_frame(1)
 					else:
 						if pos.y > (self.position.y):
-							$Sprite.set_frame(0)
+							$Sprite.set_frame(1)
 						else:
-							$Sprite.set_frame(3)
+							$Sprite.set_frame(1)
 					timeline_name = "Susan-" + str(Global.susan_index)
 					var dialog = Dialogic.start(timeline_name)
 					dialog.pause_mode = PAUSE_MODE_PROCESS

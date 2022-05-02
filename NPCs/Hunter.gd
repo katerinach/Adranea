@@ -33,12 +33,12 @@ func _input(event):
 						if pos_temp < self.position.x:
 							$Sprite.set_frame(2)
 						else:
-							$Sprite.set_frame(1)
+							$Sprite.set_frame(2)
 					else:
 						if pos.y > (self.position.y):
-							$Sprite.set_frame(0)
+							$Sprite.set_frame(2)
 						else:
-							$Sprite.set_frame(3)
+							$Sprite.set_frame(2)
 					
 					timeline_name = "hunter-" + str(dialogic_index)
 					var dialog = Dialogic.start(timeline_name)
@@ -62,7 +62,7 @@ func _on_NPC_body_entered(body):
 func _on_NPC_body_exited(body):
 	if body.name == 'Stede':
 		active = false
-	_sprite.set_frame(0)
+	_sprite.set_frame(2)
 	
 
 func get_task():

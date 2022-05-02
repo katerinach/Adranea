@@ -27,14 +27,14 @@ func _input(event):
 				if active == true:
 					if abs(pos.x - self.position.x) <60 and abs(pos.x - self.position.x-10)>20:
 						if pos.x >= self.position.x:
-							$Sprite.set_frame(1)
+							$Sprite.set_frame(0)
 						else:
-							$Sprite.set_frame(2)
+							$Sprite.set_frame(0)
 					else:
 						if pos.y > (self.position.y):
 							$Sprite.set_frame(0)
 						else:
-							$Sprite.set_frame(3)
+							$Sprite.set_frame(0)
 					timeline_name = "Tyrell-" + str(dialogic_index)
 					var dialog = Dialogic.start(timeline_name)
 					dialog.pause_mode = PAUSE_MODE_PROCESS
@@ -56,7 +56,7 @@ func _on_NPC_body_entered(body):
 func _on_NPC_body_exited(body):
 	if body.name == 'Stede':
 		active = false
-	_sprite.set_frame(1)
+	_sprite.set_frame(0)
 	
 	
 func end_dialog(timeline_name):

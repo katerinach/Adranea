@@ -12,7 +12,7 @@
 [ext_resource path="res://NPCs/pngwing.com (1).png" type="Texture" id=10]
 [ext_resource path="res://NPCs/images/Marios.png" type="Texture" id=11]
 [ext_resource path="res://NPCs/Charlotte.gd" type="Script" id=12]
-[ext_resource path="res://NPCs/images/Trixie.png" type="Texture" id=13]
+[ext_resource path="res://NPCs/images/mainnpcs.png" type="Texture" id=13]
 [ext_resource path="res://World/noticePoster.tscn" type="PackedScene" id=14]
 [ext_resource path="res://World/Sign.tscn" type="PackedScene" id=15]
 [ext_resource path="res://World/bushPlant.tscn" type="PackedScene" id=16]
@@ -336,7 +336,7 @@ position = Vector2( 208, 88 )
 position = Vector2( 112, 9.34518 )
 
 [node name="Charlotte" type="Area2D" parent="YSort"]
-position = Vector2( 191, 50 )
+position = Vector2( 189, 42.0533 )
 scale = Vector2( 5, 5 )
 script = ExtResource( 12 )
 
@@ -354,7 +354,7 @@ position = Vector2( 0.399994, 0.400002 )
 scale = Vector2( 0.22, 0.22 )
 texture = ExtResource( 13 )
 hframes = 4
-frame = 1
+frame = 3
 
 [node name="Sign" parent="YSort" instance=ExtResource( 15 )]
 position = Vector2( 400, 96 )

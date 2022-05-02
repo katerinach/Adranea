@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=2]
+[gd_scene load_steps=70 format=2]
 
 [ext_resource path="res://World/deskBack.tscn" type="PackedScene" id=1]
 [ext_resource path="res://NPCs/Hunter.gd" type="Script" id=2]
@@ -26,7 +26,7 @@
 [ext_resource path="res://World/pcDown.png" type="Texture" id=24]
 [ext_resource path="res://World/officePC.png" type="Texture" id=25]
 [ext_resource path="res://NPCs/images/Caleb.png" type="Texture" id=26]
-[ext_resource path="res://NPCs/images/Tina.png" type="Texture" id=27]
+[ext_resource path="res://NPCs/images/Hunter.png" type="Texture" id=27]
 [ext_resource path="res://NPCs/Björn.gd" type="Script" id=28]
 [ext_resource path="res://World/phone.png" type="Texture" id=29]
 [ext_resource path="res://NPCs/images/bjorn.png" type="Texture" id=30]
@@ -42,6 +42,7 @@
 [ext_resource path="res://World/coffeeMaker.png" type="Texture" id=40]
 [ext_resource path="res://World/Telephone.tscn" type="PackedScene" id=41]
 [ext_resource path="res://Items/coffeMaker.gd" type="Script" id=42]
+[ext_resource path="res://NPCs/images/mainnpcs.png" type="Texture" id=43]
 
 [sub_resource type="GDScript" id=16]
 script/source = "extends Node2D
@@ -854,7 +855,7 @@ scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 11 )
 
 [node name="Sprite" type="Sprite" parent="YSort/Mary"]
-position = Vector2( 0.199997, 4 )
+position = Vector2( 0.199997, 1 )
 scale = Vector2( 0.22, 0.22 )
 texture = ExtResource( 27 )
 hframes = 4
@@ -932,16 +933,16 @@ position = Vector2( 0.199998, 0.2 )
 shape = SubResource( 15 )
 
 [node name="QuestionMark" type="Sprite" parent="YSort/Hunter"]
-position = Vector2( 0, -5.6001 )
+position = Vector2( 0.800049, -7.3999 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 11 )
 
 [node name="Sprite" type="Sprite" parent="YSort/Hunter"]
 position = Vector2( 0.599998, -1 )
 scale = Vector2( 0.22, 0.22 )
-texture = ExtResource( 10 )
-hframes = 8
-vframes = 4
+texture = ExtResource( 43 )
+hframes = 4
+frame = 2
 
 [node name="Caleb" type="Area2D" parent="YSort"]
 position = Vector2( 240, 38 )

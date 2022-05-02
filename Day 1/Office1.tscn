@@ -24,7 +24,7 @@
 [ext_resource path="res://NPCs/npcfemale.png" type="Texture" id=22]
 [ext_resource path="res://NPCs/images/Trixie.png" type="Texture" id=23]
 [ext_resource path="res://NPCs/Susan.gd" type="Script" id=24]
-[ext_resource path="res://NPCs/images/Hunter.png" type="Texture" id=25]
+[ext_resource path="res://NPCs/images/mainnpcs.png" type="Texture" id=25]
 [ext_resource path="res://World/trashcan.tscn" type="PackedScene" id=26]
 [ext_resource path="res://World/bookStack.tscn" type="PackedScene" id=27]
 [ext_resource path="res://World/waterDispenser.tscn" type="PackedScene" id=28]
@@ -1000,6 +1000,7 @@ position = Vector2( 0.199997, -0.999985 )
 scale = Vector2( 0.22, 0.22 )
 texture = ExtResource( 25 )
 hframes = 4
+frame = 1
 
 [node name="Control" parent="YSort" instance=ExtResource( 17 )]
 margin_left = 452.0
